@@ -4,7 +4,7 @@
     android:id="@+id/recyclerView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textSize="20sp"
+    android:textSize="21sp"
     style="@style/CustomTextStyle"
     android:padding="8dp"
     android:background="#FFDBD7"
