@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\yosef\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from G:\yosef\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from G:\yosef\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from G:\yosef\app\src\main\AndroidManifest.xml:2:1-39:12
+ADDED from G:\yosef\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from G:\yosef\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from G:\yosef\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from G:\yosef\app\src\main\AndroidManifest.xml:2:1-38:12
 MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\fcf1f5443802bff002192d36259c8fbe\transformed\navigation-common-2.7.7\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\dbbf0f8492044485dc8bbfaa1f55f649\transformed\navigation-common-ktx-2.7.7\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-runtime:2.7.7] C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\b9b630aa55aa5d7cf403f6b38ca4b96e\transformed\navigation-runtime-2.7.7\AndroidManifest.xml:17:1-22:12
@@ -153,35 +153,35 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\EL
 	android:dataExtractionRules
 		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:9:9-65
 activity#com.training.recipeapp.RecipeActivity
-ADDED from G:\yosef\app\src\main\AndroidManifest.xml:17:9-19:40
+ADDED from G:\yosef\app\src\main\AndroidManifest.xml:18:9-20:40
 	android:exported
-		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:19:13-37
+		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:20:13-37
 	android:name
-		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:18:13-43
+		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:19:13-43
 activity#com.training.recipeapp.AuthActivity
-ADDED from G:\yosef\app\src\main\AndroidManifest.xml:23:9-32:20
+ADDED from G:\yosef\app\src\main\AndroidManifest.xml:21:9-29:20
 	android:launchMode
-		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:26:13-43
+		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:24:13-43
 	android:exported
-		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:25:13-36
+		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:23:13-36
 	android:name
-		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:24:13-41
+		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:22:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from G:\yosef\app\src\main\AndroidManifest.xml:27:13-31:29
+ADDED from G:\yosef\app\src\main\AndroidManifest.xml:25:13-28:29
 action#android.intent.action.MAIN
-ADDED from G:\yosef\app\src\main\AndroidManifest.xml:28:17-69
+ADDED from G:\yosef\app\src\main\AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:28:25-66
+		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from G:\yosef\app\src\main\AndroidManifest.xml:30:17-77
+ADDED from G:\yosef\app\src\main\AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:30:27-74
+		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:27:27-74
 meta-data#preloaded_fonts
-ADDED from G:\yosef\app\src\main\AndroidManifest.xml:34:9-36:57
+ADDED from G:\yosef\app\src\main\AndroidManifest.xml:31:9-33:57
 	android:resource
-		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:36:13-54
+		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:33:13-54
 	android:name
-		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:35:13-43
+		ADDED from G:\yosef\app\src\main\AndroidManifest.xml:32:13-43
 uses-sdk
 INJECTED from G:\yosef\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from G:\yosef\app\src\main\AndroidManifest.xml

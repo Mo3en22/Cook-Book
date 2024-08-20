@@ -3081,6 +3081,7 @@ int drawable ic_mtrl_chip_checked_black 0x7f0800a1
 int drawable ic_mtrl_chip_checked_circle 0x7f0800a2
 int drawable ic_mtrl_chip_close_circle 0x7f0800a3
 int drawable ic_search_black_24 0x7f0800a4
+int drawable ic_share 0x7f0800f4
 int drawable indeterminate_static 0x7f0800a5
 int drawable logo 0x7f0800a6
 int drawable m3_avd_hide_password 0x7f0800a7
@@ -3370,7 +3371,6 @@ int id exitUntilCollapsed 0x7f0a00cd
 int id expand_activities_button 0x7f0a00ce
 int id expanded_menu 0x7f0a00cf
 int id fade 0x7f0a00d0
-int id favoriteIcon 0x7f0a00d1
 int id favoritesFragment 0x7f0a00d2
 int id fill 0x7f0a00d3
 int id fill_horizontal 0x7f0a00d4
@@ -3622,6 +3622,7 @@ int id search_voice_btn 0x7f0a01c8
 int id select_dialog_listview 0x7f0a01c9
 int id selected 0x7f0a01ca
 int id selection_type 0x7f0a01cb
+int id shareIcon 0x7f0a0248
 int id sharedValueSet 0x7f0a01cc
 int id sharedValueUnset 0x7f0a01cd
 int id shortcut 0x7f0a01ce

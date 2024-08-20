@@ -21,9 +21,6 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final ImageView favoriteIcon;
-
-  @NonNull
   public final ImageView recipeImageView;
 
   @NonNull
@@ -32,14 +29,17 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
   @NonNull
   public final TextView recipeNameTextView;
 
-  private FragmentRecipeDetailBinding(@NonNull ScrollView rootView, @NonNull ImageView favoriteIcon,
+  @NonNull
+  public final ImageView shareIcon;
+
+  private FragmentRecipeDetailBinding(@NonNull ScrollView rootView,
       @NonNull ImageView recipeImageView, @NonNull TextView recipeInstructionsTextView,
-      @NonNull TextView recipeNameTextView) {
+      @NonNull TextView recipeNameTextView, @NonNull ImageView shareIcon) {
     this.rootView = rootView;
-    this.favoriteIcon = favoriteIcon;
     this.recipeImageView = recipeImageView;
     this.recipeInstructionsTextView = recipeInstructionsTextView;
     this.recipeNameTextView = recipeNameTextView;
+    this.shareIcon = shareIcon;
   }
 
   @Override
@@ -69,12 +69,6 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.favoriteIcon;
-      ImageView favoriteIcon = ViewBindings.findChildViewById(rootView, id);
-      if (favoriteIcon == null) {
-        break missingId;
-      }
-
       id = R.id.recipeImageView;
       ImageView recipeImageView = ViewBindings.findChildViewById(rootView, id);
       if (recipeImageView == null) {
@@ -93,8 +87,14 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentRecipeDetailBinding((ScrollView) rootView, favoriteIcon, recipeImageView,
-          recipeInstructionsTextView, recipeNameTextView);
+      id = R.id.shareIcon;
+      ImageView shareIcon = ViewBindings.findChildViewById(rootView, id);
+      if (shareIcon == null) {
+        break missingId;
+      }
+
+      return new FragmentRecipeDetailBinding((ScrollView) rootView, recipeImageView,
+          recipeInstructionsTextView, recipeNameTextView, shareIcon);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

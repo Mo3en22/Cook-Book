@@ -32,9 +32,6 @@
         <activity
             android:name="com.training.recipeapp.RecipeActivity"
             android:exported="false" />
-        <!-- <activity -->
-        <!-- android:name=".MainViewModel" -->
-        <!-- android:exported="false" /> -->
         <activity
             android:name="com.training.recipeapp.AuthActivity"
             android:exported="true"

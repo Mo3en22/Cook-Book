@@ -28,16 +28,16 @@
         "source": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\xml_file_paths.xml.flat",
+        "source": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\xml\\file_paths.xml"
+    },
+    {
         "merged": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\layout_fragment_creator.xml.flat",
         "source": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\fragment_creator.xml"
     },
     {
         "merged": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\drawable_ic_home.xml.flat",
         "source": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\drawable\\ic_home.xml"
-    },
-    {
-        "merged": "com.training.recipeapp-debug-65:/layout_fragment_login.xml.flat",
-        "source": "com.training.recipeapp-main-67:/layout/fragment_login.xml"
     },
     {
         "merged": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\layout_activity_recipe.xml.flat",
@@ -92,12 +92,12 @@
         "source": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\drawable\\baseline_logout_24.xml"
     },
     {
-        "merged": "com.training.recipeapp-debug-65:/layout_fragment_register.xml.flat",
-        "source": "com.training.recipeapp-main-67:/layout/fragment_register.xml"
-    },
-    {
         "merged": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.training.recipeapp-debug-65:/layout_fragment_fav.xml.flat",
+        "source": "com.training.recipeapp-main-67:/layout/fragment_fav.xml"
     },
     {
         "merged": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\layout_fragment_search.xml.flat",
@@ -186,6 +186,14 @@
     {
         "merged": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\drawable_gradinentcard.xml.flat",
         "source": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\drawable\\gradinentcard.xml"
+    },
+    {
+        "merged": "com.training.recipeapp-debug-65:/layout_fragment_home.xml.flat",
+        "source": "com.training.recipeapp-main-67:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\drawable_ic_share.xml.flat",
+        "source": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\drawable\\ic_share.xml"
     },
     {
         "merged": "C:\\Users\\EL RAEED  A1\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\layout_fragment_login.xml.flat",

@@ -1,5 +1,6 @@
 package com.training.recipeapp.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,12 +15,14 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+
 class RecipeDetailFragment : Fragment() {
 
     private lateinit var apiService: ApiService
     private lateinit var recipeImageView: ImageView
     private lateinit var recipeNameTextView: TextView
     private lateinit var recipeInstructionsTextView: TextView
+    private lateinit var shareIcon: ImageView
     private var isInstructionsVisible = false
 
     override fun onCreateView(
@@ -35,6 +38,7 @@ class RecipeDetailFragment : Fragment() {
         recipeImageView = view.findViewById(R.id.recipeImageView)
         recipeNameTextView = view.findViewById(R.id.recipeNameTextView)
         recipeInstructionsTextView = view.findViewById(R.id.recipeInstructionsTextView)
+        shareIcon = view.findViewById(R.id.shareIcon)
 
         // Initialize Retrofit
         apiService = Retrofit.Builder()
@@ -49,6 +53,11 @@ class RecipeDetailFragment : Fragment() {
         // Set up click listener for recipe name
         recipeNameTextView.setOnClickListener {
             toggleInstructionsVisibility()
+        }
+
+        // Set up click listener for share icon
+        shareIcon.setOnClickListener {
+            shareRecipe()
         }
     }
 
@@ -65,6 +74,9 @@ class RecipeDetailFragment : Fragment() {
                         recipeInstructionsTextView.text = it.strInstructions ?: "No instructions available"
                         recipeImageView.load(it.strMealThumb)
                         recipeInstructionsTextView.visibility = View.GONE // Hide instructions initially
+
+                        // Store the image URL in arguments for sharing
+                        arguments?.putString("RECIPE_IMAGE_URL", it.strMealThumb)
                     }
                 } else {
                     showError("Failed to load recipe details")
@@ -77,6 +89,8 @@ class RecipeDetailFragment : Fragment() {
         })
     }
 
+
+
     private fun toggleInstructionsVisibility() {
         isInstructionsVisible = !isInstructionsVisible
         recipeInstructionsTextView.visibility = if (isInstructionsVisible) {
@@ -84,6 +98,27 @@ class RecipeDetailFragment : Fragment() {
         } else {
             View.GONE
         }
+    }
+    private fun shareRecipe() {
+        val recipeName = recipeNameTextView.text.toString()
+        val recipeInstructions = recipeInstructionsTextView.text.toString()
+        val recipeImageUrl = (arguments?.getString("RECIPE_IMAGE_URL")) ?: ""
+
+        val shareText = """
+        Check out this recipe!
+        
+        Name: $recipeName
+        Instructions: $recipeInstructions
+        Image: $recipeImageUrl
+    """.trimIndent()
+
+        val shareIntent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, shareText)
+            type = "text/plain"
+        }
+
+        startActivity(Intent.createChooser(shareIntent, "Share recipe via"))
     }
 
     private fun showError(message: String) {

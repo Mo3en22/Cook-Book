@@ -18,6 +18,7 @@ drawable ic_favorites
 drawable ic_home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_share
 drawable logo
 drawable shape
 drawable shape2
@@ -42,7 +43,6 @@ id et_user_name
 id etregister_email
 id etregister_password
 id etregister_username
-id favoriteIcon
 id favoritesFragment
 id four
 id fragment_container
@@ -79,6 +79,7 @@ id recyclerView
 id registerFragment
 id rv_search_meals
 id search_box
+id shareIcon
 id splashFragment
 id three
 id toolbar_title
