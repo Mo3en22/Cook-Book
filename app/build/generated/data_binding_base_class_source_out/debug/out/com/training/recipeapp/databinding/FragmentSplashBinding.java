@@ -24,15 +24,19 @@ public final class FragmentSplashBinding implements ViewBinding {
   public final ImageView image;
 
   @NonNull
+  public final TextView tvCookbook;
+
+  @NonNull
   public final TextView tvTo;
 
   @NonNull
   public final TextView tvWelcome;
 
   private FragmentSplashBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView image,
-      @NonNull TextView tvTo, @NonNull TextView tvWelcome) {
+      @NonNull TextView tvCookbook, @NonNull TextView tvTo, @NonNull TextView tvWelcome) {
     this.rootView = rootView;
     this.image = image;
+    this.tvCookbook = tvCookbook;
     this.tvTo = tvTo;
     this.tvWelcome = tvWelcome;
   }
@@ -70,6 +74,12 @@ public final class FragmentSplashBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tv_cookbook;
+      TextView tvCookbook = ViewBindings.findChildViewById(rootView, id);
+      if (tvCookbook == null) {
+        break missingId;
+      }
+
       id = R.id.tv_to;
       TextView tvTo = ViewBindings.findChildViewById(rootView, id);
       if (tvTo == null) {
@@ -82,7 +92,8 @@ public final class FragmentSplashBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentSplashBinding((ConstraintLayout) rootView, image, tvTo, tvWelcome);
+      return new FragmentSplashBinding((ConstraintLayout) rootView, image, tvCookbook, tvTo,
+          tvWelcome);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

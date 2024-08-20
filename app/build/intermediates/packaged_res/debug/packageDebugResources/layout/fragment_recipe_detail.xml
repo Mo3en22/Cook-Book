@@ -22,7 +22,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="16dp"
-            android:src="@drawable/ic_favorite_border" /> <!-- Default to unselected heart icon -->
+           /> <!-- Default to unselected heart icon -->
 
         <TextView
             android:id="@+id/recipeNameTextView"

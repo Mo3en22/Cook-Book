@@ -4,6 +4,7 @@ package com.training.recipeapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,6 +32,9 @@ public final class FragmentLoginBinding implements ViewBinding {
   public final MaterialButton login;
 
   @NonNull
+  public final ImageView logoImage;
+
+  @NonNull
   public final TextView noAccount;
 
   @NonNull
@@ -38,11 +42,13 @@ public final class FragmentLoginBinding implements ViewBinding {
 
   private FragmentLoginBinding(@NonNull ConstraintLayout rootView,
       @NonNull TextInputLayout etPassword, @NonNull TextInputLayout etUserName,
-      @NonNull MaterialButton login, @NonNull TextView noAccount, @NonNull TextView tvSignin) {
+      @NonNull MaterialButton login, @NonNull ImageView logoImage, @NonNull TextView noAccount,
+      @NonNull TextView tvSignin) {
     this.rootView = rootView;
     this.etPassword = etPassword;
     this.etUserName = etUserName;
     this.login = login;
+    this.logoImage = logoImage;
     this.noAccount = noAccount;
     this.tvSignin = tvSignin;
   }
@@ -92,6 +98,12 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.logo_image;
+      ImageView logoImage = ViewBindings.findChildViewById(rootView, id);
+      if (logoImage == null) {
+        break missingId;
+      }
+
       id = R.id.no_account;
       TextView noAccount = ViewBindings.findChildViewById(rootView, id);
       if (noAccount == null) {
@@ -105,7 +117,7 @@ public final class FragmentLoginBinding implements ViewBinding {
       }
 
       return new FragmentLoginBinding((ConstraintLayout) rootView, etPassword, etUserName, login,
-          noAccount, tvSignin);
+          logoImage, noAccount, tvSignin);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

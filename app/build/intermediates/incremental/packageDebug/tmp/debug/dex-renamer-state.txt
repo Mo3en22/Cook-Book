@@ -1,4 +1,4 @@
-#Mon Aug 19 22:03:47 EEST 2024
+#Tue Aug 20 03:21:18 EEST 2024
 base.0=G\:\\yosef\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=G\:\\yosef\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=G\:\\yosef\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex

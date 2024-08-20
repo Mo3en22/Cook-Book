@@ -22,15 +22,27 @@ import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.training.recipeapp.fragments.CreatorFragment
 import com.training.recipeapp.fragments.HomeFragment
+import com.training.recipeapp.fragments.SearchFragment
 
 @Suppress("DEPRECATION")
 class RecipeActivity : AppCompatActivity() {
-
+    private lateinit var imgsearch: ImageView
     private lateinit var navController: NavController
+
+
+    private fun openSearchFragment() {
+        val fragmentManager = supportFragmentManager
+        val transaction = fragmentManager.beginTransaction()
+        transaction.replace(R.id.nav_host_Recipefragment, SearchFragment(), "search_fragment_tag")
+        transaction.setReorderingAllowed(true)
+        transaction.addToBackStack("search_fragment_backstack")
+        transaction.commit()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipe)
+        imgsearch = findViewById(R.id.imghomesearcrh)
 
         val toolbar: Toolbar = findViewById(R.id.appbar)
         setSupportActionBar(toolbar)
@@ -48,12 +60,18 @@ class RecipeActivity : AppCompatActivity() {
                     navController.navigate(R.id.homeFragment) // Navigate to HomeFragment
                     true
                 }
+
                 R.id.navigation_favorites -> {
                     navController.navigate(R.id.favoritesFragment) // Navigate to FavoritesFragment
                     true
                 }
+
                 else -> false
             }
+
+        }
+        imgsearch.setOnClickListener {
+            openSearchFragment()
         }
     }
 
@@ -114,6 +132,7 @@ class RecipeActivity : AppCompatActivity() {
             applyCustomTypeFace(paint, newType)
         }
 
+
         private fun applyCustomTypeFace(paint: Paint, tf: Typeface) {
             val oldStyle: Int
             val old = paint.typeface
@@ -130,5 +149,7 @@ class RecipeActivity : AppCompatActivity() {
 
             paint.typeface = tf
         }
+
+
     }
 }

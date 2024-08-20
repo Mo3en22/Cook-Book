@@ -1,11 +1,11 @@
 package com.training.recipeapp.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.training.recipeapp.R
@@ -53,10 +53,10 @@ class HomeFragment : Fragment() {
                     val recipes = response.body()?.meals ?: emptyList()
                     adapter = RecipeAdapter(recipes) { recipe ->
                         // Handle recipe item click
-                        val intent = Intent(activity, RecipeDetailFragment::class.java).apply {
-                            putExtra("RECIPE_ID", recipe.idMeal)
+                        val bundle = Bundle().apply {
+                            putString("RECIPE_ID", recipe.idMeal)
                         }
-                        startActivity(intent)
+                        findNavController().navigate(R.id.action_homeFragment_to_recipeDetailFragment2, bundle)
                     }
                     recyclerView.adapter = adapter
                 } else {

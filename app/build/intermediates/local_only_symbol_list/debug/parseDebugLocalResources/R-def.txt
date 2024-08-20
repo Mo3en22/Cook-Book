@@ -14,7 +14,6 @@ drawable baseline_search_24
 drawable gradient
 drawable gradient_background
 drawable gradinentcard
-drawable ic_favorite_border
 drawable ic_favorites
 drawable ic_home
 drawable ic_launcher_background
@@ -55,6 +54,7 @@ id iv_product
 id linear_search
 id login
 id loginFragment
+id logo_image
 id main
 id my_card
 id nav_host_Recipefragment
@@ -82,6 +82,7 @@ id search_box
 id splashFragment
 id three
 id toolbar_title
+id tv_cookbook
 id tv_product
 id tv_register
 id tv_signin
