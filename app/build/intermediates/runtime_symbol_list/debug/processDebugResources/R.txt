@@ -3584,6 +3584,7 @@ int id recipeLayout2 0x7f0a01a2
 int id recipeName1 0x7f0a01a3
 int id recipeName2 0x7f0a01a4
 int id recipeNameTextView 0x7f0a01a5
+int id recipeVideoWebView 0x7f0a0249
 int id recipenavgation 0x7f0a01a6
 int id rectangles 0x7f0a01a7
 int id recyclerView 0x7f0a01a8

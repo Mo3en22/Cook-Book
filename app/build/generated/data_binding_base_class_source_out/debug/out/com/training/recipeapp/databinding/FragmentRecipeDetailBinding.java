@@ -4,6 +4,7 @@ package com.training.recipeapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -30,15 +31,20 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
   public final TextView recipeNameTextView;
 
   @NonNull
+  public final WebView recipeVideoWebView;
+
+  @NonNull
   public final ImageView shareIcon;
 
   private FragmentRecipeDetailBinding(@NonNull ScrollView rootView,
       @NonNull ImageView recipeImageView, @NonNull TextView recipeInstructionsTextView,
-      @NonNull TextView recipeNameTextView, @NonNull ImageView shareIcon) {
+      @NonNull TextView recipeNameTextView, @NonNull WebView recipeVideoWebView,
+      @NonNull ImageView shareIcon) {
     this.rootView = rootView;
     this.recipeImageView = recipeImageView;
     this.recipeInstructionsTextView = recipeInstructionsTextView;
     this.recipeNameTextView = recipeNameTextView;
+    this.recipeVideoWebView = recipeVideoWebView;
     this.shareIcon = shareIcon;
   }
 
@@ -87,6 +93,12 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recipeVideoWebView;
+      WebView recipeVideoWebView = ViewBindings.findChildViewById(rootView, id);
+      if (recipeVideoWebView == null) {
+        break missingId;
+      }
+
       id = R.id.shareIcon;
       ImageView shareIcon = ViewBindings.findChildViewById(rootView, id);
       if (shareIcon == null) {
@@ -94,7 +106,7 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
       }
 
       return new FragmentRecipeDetailBinding((ScrollView) rootView, recipeImageView,
-          recipeInstructionsTextView, recipeNameTextView, shareIcon);
+          recipeInstructionsTextView, recipeNameTextView, recipeVideoWebView, shareIcon);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

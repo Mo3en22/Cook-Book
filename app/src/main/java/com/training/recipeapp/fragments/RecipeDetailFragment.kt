@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebSettings
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -22,6 +25,7 @@ class RecipeDetailFragment : Fragment() {
     private lateinit var recipeImageView: ImageView
     private lateinit var recipeNameTextView: TextView
     private lateinit var recipeInstructionsTextView: TextView
+    private lateinit var recipeVideoWebView: WebView
     private lateinit var shareIcon: ImageView
     private var isInstructionsVisible = false
 
@@ -38,6 +42,7 @@ class RecipeDetailFragment : Fragment() {
         recipeImageView = view.findViewById(R.id.recipeImageView)
         recipeNameTextView = view.findViewById(R.id.recipeNameTextView)
         recipeInstructionsTextView = view.findViewById(R.id.recipeInstructionsTextView)
+        recipeVideoWebView = view.findViewById(R.id.recipeVideoWebView)
         shareIcon = view.findViewById(R.id.shareIcon)
 
         // Initialize Retrofit
@@ -77,6 +82,10 @@ class RecipeDetailFragment : Fragment() {
 
                         // Store the image URL in arguments for sharing
                         arguments?.putString("RECIPE_IMAGE_URL", it.strMealThumb)
+
+                        // إعداد وتشغيل الفيديو
+                        val videoUrl = it.strYoutube?.replace("watch?v=", "embed/") ?: ""
+                        setupAndLoadVideo(videoUrl)
                     }
                 } else {
                     showError("Failed to load recipe details")
@@ -89,7 +98,14 @@ class RecipeDetailFragment : Fragment() {
         })
     }
 
-
+    private fun setupAndLoadVideo(videoUrl: String) {
+        if (videoUrl.isNotEmpty()) {
+            recipeVideoWebView.webViewClient = WebViewClient()
+            val webSettings: WebSettings = recipeVideoWebView.settings
+            webSettings.javaScriptEnabled = true
+            recipeVideoWebView.loadUrl(videoUrl)
+        }
+    }
 
     private fun toggleInstructionsVisibility() {
         isInstructionsVisible = !isInstructionsVisible
@@ -99,10 +115,11 @@ class RecipeDetailFragment : Fragment() {
             View.GONE
         }
     }
+
     private fun shareRecipe() {
         val recipeName = recipeNameTextView.text.toString()
         val recipeInstructions = recipeInstructionsTextView.text.toString()
-        val recipeImageUrl = (arguments?.getString("RECIPE_IMAGE_URL")) ?: ""
+        val recipeImageUrl = (arguments?.getString("RECIPE_IMAGE_URL")) ?: "https://www.youtube.com/watch?v=8pPwWqtOFWk"
 
         val shareText = """
         Check out this recipe!
@@ -120,7 +137,7 @@ class RecipeDetailFragment : Fragment() {
 
         startActivity(Intent.createChooser(shareIntent, "Share recipe via"))
     }
-//test
+
     private fun showError(message: String) {
         // Implement your error handling logic here
         // For example, show a Toast or Snackbar with the error message
