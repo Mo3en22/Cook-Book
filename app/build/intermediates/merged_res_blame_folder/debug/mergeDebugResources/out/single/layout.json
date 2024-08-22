@@ -1,58 +1,58 @@
 [
     {
-        "merged": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-mergeDebugResources-64:\\layout\\fragment_recipe_detail.xml",
-        "source": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\fragment_recipe_detail.xml"
+        "merged": "com.training.recipeapp-mergeDebugResources-64:/layout/fragment_home.xml",
+        "source": "com.training.recipeapp-main-67:/layout/fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-mergeDebugResources-64:\\layout\\fragment_fav.xml",
-        "source": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\fragment_fav.xml"
+        "merged": "com.training.recipeapp-mergeDebugResources-64:/layout/item_category.xml",
+        "source": "com.training.recipeapp-main-67:/layout/item_category.xml"
     },
     {
-        "merged": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-mergeDebugResources-64:\\layout\\fragment_search.xml",
-        "source": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\fragment_search.xml"
+        "merged": "com.training.recipeapp-mergeDebugResources-64:/layout/fragment_creator.xml",
+        "source": "com.training.recipeapp-main-67:/layout/fragment_creator.xml"
     },
     {
-        "merged": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-mergeDebugResources-64:\\layout\\item_recipe.xml",
-        "source": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\item_recipe.xml"
+        "merged": "com.training.recipeapp-mergeDebugResources-64:/layout/activity_main.xml",
+        "source": "com.training.recipeapp-main-67:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-mergeDebugResources-64:\\layout\\fragment_register.xml",
-        "source": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\fragment_register.xml"
+        "merged": "com.training.recipeapp-mergeDebugResources-64:/layout/fragment_search.xml",
+        "source": "com.training.recipeapp-main-67:/layout/fragment_search.xml"
     },
     {
-        "merged": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-mergeDebugResources-64:\\layout\\item_card.xml",
-        "source": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\item_card.xml"
+        "merged": "com.training.recipeapp-mergeDebugResources-64:/layout/fragment_fav.xml",
+        "source": "com.training.recipeapp-main-67:/layout/fragment_fav.xml"
     },
     {
-        "merged": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-mergeDebugResources-64:\\layout\\fragment_creator.xml",
-        "source": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\fragment_creator.xml"
+        "merged": "com.training.recipeapp-mergeDebugResources-64:/layout/activity_recipe.xml",
+        "source": "com.training.recipeapp-main-67:/layout/activity_recipe.xml"
     },
     {
-        "merged": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-mergeDebugResources-64:\\layout\\activity_recipe.xml",
-        "source": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\activity_recipe.xml"
+        "merged": "com.training.recipeapp-mergeDebugResources-64:/layout/activity_main_view_model.xml",
+        "source": "com.training.recipeapp-main-67:/layout/activity_main_view_model.xml"
+    },
+    {
+        "merged": "com.training.recipeapp-mergeDebugResources-64:/layout/fragment_login.xml",
+        "source": "com.training.recipeapp-main-67:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.training.recipeapp-mergeDebugResources-64:/layout/item_recipe_linear.xml",
+        "source": "com.training.recipeapp-main-67:/layout/item_recipe_linear.xml"
     },
     {
         "merged": "com.training.recipeapp-mergeDebugResources-64:/layout/fragment_recipe_detail.xml",
         "source": "com.training.recipeapp-main-67:/layout/fragment_recipe_detail.xml"
     },
     {
-        "merged": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-mergeDebugResources-64:\\layout\\fragment_home.xml",
-        "source": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\fragment_home.xml"
+        "merged": "com.training.recipeapp-mergeDebugResources-64:/layout/fragment_register.xml",
+        "source": "com.training.recipeapp-main-67:/layout/fragment_register.xml"
     },
     {
-        "merged": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-mergeDebugResources-64:\\layout\\activity_main_view_model.xml",
-        "source": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\activity_main_view_model.xml"
+        "merged": "com.training.recipeapp-mergeDebugResources-64:/layout/item_card.xml",
+        "source": "com.training.recipeapp-main-67:/layout/item_card.xml"
     },
     {
-        "merged": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-mergeDebugResources-64:\\layout\\fragment_splash.xml",
-        "source": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\fragment_splash.xml"
-    },
-    {
-        "merged": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-mergeDebugResources-64:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-mergeDebugResources-64:\\layout\\fragment_login.xml",
-        "source": "C:\\Users\\smart\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\fragment_login.xml"
+        "merged": "com.training.recipeapp-mergeDebugResources-64:/layout/fragment_splash.xml",
+        "source": "com.training.recipeapp-main-67:/layout/fragment_splash.xml"
     }
 ]

@@ -45,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/recipeVideoWebView"
-            android:paddingTop="8dp"
+            android:paddingTop="10dp"
             android:textSize="20sp"
             style="@style/CustomTextStyle"
             android:visibility="gone" />
