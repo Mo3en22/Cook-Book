@@ -17,6 +17,13 @@ data class Recipe(
     val strInstructions: String,
     val strYoutube: String?// إضافة التعليمات
 )
+data class CategoryResponse(
+    val categories: List<Category>
+)
+data class Category(
+    val strCategory: String,//category
+    val strCategoryThumb:String,//image
+)
 
 // واجهة API
 interface ApiService {
@@ -25,4 +32,7 @@ interface ApiService {
 
     @GET("api/json/v1/1/lookup.php")
     fun getRecipeById(@Query("i") id: String): Call<RecipeResponse>
+
+    @GET("api/json/v1/1/categories.php")
+    fun getCategories(): Call<CategoryResponse>
 }
