@@ -6,6 +6,7 @@ array com_google_android_gms_fonts_certs_prod
 array preloaded_fonts
 color black
 color white
+drawable app_icon_background
 drawable baseline_close_24
 drawable baseline_create_24
 drawable baseline_logout_24
@@ -118,8 +119,8 @@ layout item_recipe_linear
 menu bottom_nav_menu
 menu menu
 mipmap app_icon
-mipmap ic_launcher
-mipmap ic_launcher_round
+mipmap app_icon_foreground
+mipmap app_icon_round
 navigation navigation
 navigation recipenavgation
 string app_name

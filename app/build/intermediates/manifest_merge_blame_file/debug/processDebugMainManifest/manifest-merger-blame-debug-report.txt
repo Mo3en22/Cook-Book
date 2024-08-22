@@ -35,12 +35,12 @@
 24        android:extractNativeLibs="false"
 25        android:fullBackupContent="@xml/backup_rules"
 25-->G:\Dina\app\src\main\AndroidManifest.xml:10:9-54
-26        android:icon="@mipmap/ic_launcher"
-26-->G:\Dina\app\src\main\AndroidManifest.xml:11:9-43
-27        android:label="@string/app_name"
-27-->G:\Dina\app\src\main\AndroidManifest.xml:12:9-41
-28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->G:\Dina\app\src\main\AndroidManifest.xml:13:9-54
+26        android:icon="@mipmap/app_icon_foreground"
+26-->G:\Dina\app\src\main\AndroidManifest.xml:11:9-51
+27        android:label="CookBook"
+27-->G:\Dina\app\src\main\AndroidManifest.xml:12:9-33
+28        android:roundIcon="@mipmap/app_icon_round"
+28-->G:\Dina\app\src\main\AndroidManifest.xml:13:9-51
 29        android:supportsRtl="true"
 29-->G:\Dina\app\src\main\AndroidManifest.xml:14:9-35
 30        android:testOnly="true"

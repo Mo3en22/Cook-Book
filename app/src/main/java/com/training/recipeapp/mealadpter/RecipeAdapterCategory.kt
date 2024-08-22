@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import com.training.recipeapp.R
 import com.training.recipeapp.fragments.Category
 import androidx.fragment.app.FragmentManager
-class RecipeAdapterCategory(
+class  RecipeAdapterCategory(
     private val categories: List<Category>,
     private val onItemClick: (Category) -> Unit // تأكد من أن هذه هي الطريقة الصحيحة
 ) : RecyclerView.Adapter<RecipeAdapterCategory.RecipeViewHolder>() {

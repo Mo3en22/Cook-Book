@@ -3037,6 +3037,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable app_icon_background
 drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_close_24
@@ -3969,8 +3970,8 @@ layout support_simple_spinner_dropdown_item
 menu bottom_nav_menu
 menu menu
 mipmap app_icon
-mipmap ic_launcher
-mipmap ic_launcher_round
+mipmap app_icon_foreground
+mipmap app_icon_round
 navigation navigation
 navigation recipenavgation
 plurals mtrl_badge_content_description
