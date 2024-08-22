@@ -3234,6 +3234,7 @@ id action_favFragment_to_recipeDetailFragment
 id action_homeFragment_to_creatorFragment
 id action_homeFragment_to_favFragment
 id action_homeFragment_to_recipeDetailFragment2
+id action_homeFragment_to_recipeListFragment
 id action_image
 id action_loginFragment_to_registerFragment
 id action_menu_divider
@@ -3242,6 +3243,8 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_recipeDetailFragment_to_creatorFragment
+id action_recipeListFragment_to_creatorFragment
+id action_recipeListFragment_to_recipeDetailFragment
 id action_registerFragment_to_loginFragment
 id action_splashFragment_to_loginFragment
 id action_text
@@ -3583,12 +3586,14 @@ id ratio
 id recipeDetailFragment
 id recipeImageView
 id recipeInstructionsTextView
+id recipeListFragment
 id recipeNameTextView
 id recipeVideoWebView
 id recipenavgation
 id rectangles
-id recyclerView_category
-id recyclerView_recipe
+id recyclerViewCategory
+id recyclerViewRecipe
+id recyclerViewRecipes
 id registerFragment
 id report_drawn
 id reverseSawtooth
@@ -3687,6 +3692,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textViewCategory
+id textViewTitle
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3889,6 +3896,7 @@ layout fragment_fav
 layout fragment_home
 layout fragment_login
 layout fragment_recipe_detail
+layout fragment_recipe_list
 layout fragment_register
 layout fragment_search
 layout fragment_splash

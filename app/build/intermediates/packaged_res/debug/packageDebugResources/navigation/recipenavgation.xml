@@ -20,6 +20,9 @@
         <action
             android:id="@+id/action_homeFragment_to_recipeDetailFragment2"
             app:destination="@id/recipeDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
     </fragment>
     <fragment
         android:id="@+id/favoritesFragment"
@@ -49,4 +52,15 @@
     <argument
         android:name="RECIPE_ID"
         app:argType="string" />
+    <fragment
+        android:id="@+id/recipeListFragment"
+        android:name="com.training.recipeapp.fragments.RecipeListFragment"
+        android:label="RecipeListFragment" >
+        <action
+            android:id="@+id/action_recipeListFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+        <action
+            android:id="@+id/action_recipeListFragment_to_creatorFragment"
+            app:destination="@id/creatorFragment" />
+    </fragment>
 </navigation>

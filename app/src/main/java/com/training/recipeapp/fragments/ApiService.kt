@@ -23,6 +23,8 @@ data class CategoryResponse(
 data class Category(
     val strCategory: String,//category
     val strCategoryThumb:String,//image
+    val recipes: List<Recipe>
+
 )
 
 // واجهة API
@@ -35,4 +37,9 @@ interface ApiService {
 
     @GET("api/json/v1/1/categories.php")
     fun getCategories(): Call<CategoryResponse>
+
+    @GET("api/json/v1/1/filter.php")
+    fun getRecipesByCategory(@Query("c") category: String): Call<RecipeResponse>
+
+
 }

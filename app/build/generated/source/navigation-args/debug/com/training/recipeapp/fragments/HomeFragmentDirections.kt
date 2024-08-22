@@ -14,5 +14,8 @@ public class HomeFragmentDirections private constructor() {
 
     public fun actionHomeFragmentToRecipeDetailFragment2(): NavDirections =
         ActionOnlyNavDirections(R.id.action_homeFragment_to_recipeDetailFragment2)
+
+    public fun actionHomeFragmentToRecipeListFragment(): NavDirections =
+        ActionOnlyNavDirections(R.id.action_homeFragment_to_recipeListFragment)
   }
 }

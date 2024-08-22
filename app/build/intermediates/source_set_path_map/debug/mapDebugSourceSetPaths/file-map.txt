@@ -1,68 +1,68 @@
-com.training.recipeapp-ui-unit-release-0 C:\Users\mshah\.gradle\caches\transforms-4\08250b017114f1491a9fde4ac14c0ea3\transformed\ui-unit-release\res
-com.training.recipeapp-ui-text-release-1 C:\Users\mshah\.gradle\caches\transforms-4\083160e14a77736b8b2c25fcb93a6ad8\transformed\ui-text-release\res
-com.training.recipeapp-slidingpanelayout-1.2.0-2 C:\Users\mshah\.gradle\caches\transforms-4\0df07e145bf4081b046435c4ec19ad51\transformed\slidingpanelayout-1.2.0\res
-com.training.recipeapp-ui-graphics-release-3 C:\Users\mshah\.gradle\caches\transforms-4\1658910291c145273944b7354f2e9256\transformed\ui-graphics-release\res
-com.training.recipeapp-savedstate-ktx-1.2.1-4 C:\Users\mshah\.gradle\caches\transforms-4\168be9d4e62de62f2c743f38681cbebe\transformed\savedstate-ktx-1.2.1\res
-com.training.recipeapp-sqlite-2.4.0-5 C:\Users\mshah\.gradle\caches\transforms-4\18204172474281c042b0f2904417b7c1\transformed\sqlite-2.4.0\res
-com.training.recipeapp-drawerlayout-1.1.1-6 C:\Users\mshah\.gradle\caches\transforms-4\21cba625089ec25580faa5802a3abf82\transformed\drawerlayout-1.1.1\res
-com.training.recipeapp-customview-poolingcontainer-1.0.0-7 C:\Users\mshah\.gradle\caches\transforms-4\26759fb0c6ee54d510f52754dec00766\transformed\customview-poolingcontainer-1.0.0\res
-com.training.recipeapp-cardview-1.0.0-8 C:\Users\mshah\.gradle\caches\transforms-4\2e4126466a4f89a46ffd64da58d1621c\transformed\cardview-1.0.0\res
-com.training.recipeapp-lifecycle-livedata-core-2.8.4-9 C:\Users\mshah\.gradle\caches\transforms-4\3325fd5b2a51a4bdf4e3b3dab7e55d01\transformed\lifecycle-livedata-core-2.8.4\res
-com.training.recipeapp-appcompat-resources-1.7.0-10 C:\Users\mshah\.gradle\caches\transforms-4\35f8f5d2693da573da4c50b041bedfb7\transformed\appcompat-resources-1.7.0\res
-com.training.recipeapp-window-1.0.0-11 C:\Users\mshah\.gradle\caches\transforms-4\3ad4b8a577fbc57682b05e72b4c01ecd\transformed\window-1.0.0\res
-com.training.recipeapp-core-1.13.1-12 C:\Users\mshah\.gradle\caches\transforms-4\3bc959314a2bf78c2151e9c455f88c85\transformed\core-1.13.1\res
-com.training.recipeapp-activity-1.9.1-13 C:\Users\mshah\.gradle\caches\transforms-4\3cc41465d84b731e246bdec71b674b8a\transformed\activity-1.9.1\res
-com.training.recipeapp-lifecycle-runtime-ktx-release-14 C:\Users\mshah\.gradle\caches\transforms-4\3e1621bd4afa102d0677a63ef7daf929\transformed\lifecycle-runtime-ktx-release\res
-com.training.recipeapp-material-1.12.0-15 C:\Users\mshah\.gradle\caches\transforms-4\3e4a34d3a6e0eada4e78d03d119de88a\transformed\material-1.12.0\res
-com.training.recipeapp-lifecycle-viewmodel-ktx-2.8.4-16 C:\Users\mshah\.gradle\caches\transforms-4\45764599a486c0bad2dde6131cd1d246\transformed\lifecycle-viewmodel-ktx-2.8.4\res
-com.training.recipeapp-recyclerview-1.1.0-17 C:\Users\mshah\.gradle\caches\transforms-4\49b59c5bf70d43f607b0dc8fca29f1e1\transformed\recyclerview-1.1.0\res
-com.training.recipeapp-profileinstaller-1.3.1-18 C:\Users\mshah\.gradle\caches\transforms-4\4d29c490dca00de5349faddab617f545\transformed\profileinstaller-1.3.1\res
-com.training.recipeapp-lifecycle-livedata-core-ktx-2.8.4-19 C:\Users\mshah\.gradle\caches\transforms-4\4d799ed4a37c551b23254673fc2f5e9b\transformed\lifecycle-livedata-core-ktx-2.8.4\res
-com.training.recipeapp-coil-base-2.3.0-20 C:\Users\mshah\.gradle\caches\transforms-4\539c83cb790e1e7225ecfad7d7a9f196\transformed\coil-base-2.3.0\res
-com.training.recipeapp-ui-release-21 C:\Users\mshah\.gradle\caches\transforms-4\5592e621442feb896ea6d62416ca711a\transformed\ui-release\res
-com.training.recipeapp-runtime-saveable-release-22 C:\Users\mshah\.gradle\caches\transforms-4\569041999978cbfd12731f373124281b\transformed\runtime-saveable-release\res
-com.training.recipeapp-ui-util-release-23 C:\Users\mshah\.gradle\caches\transforms-4\6416aa3dd5165f55cb5eccb371fda172\transformed\ui-util-release\res
-com.training.recipeapp-runtime-release-24 C:\Users\mshah\.gradle\caches\transforms-4\65df14c9ead1f8c1976777cc45c9d14b\transformed\runtime-release\res
-com.training.recipeapp-viewpager2-1.0.0-25 C:\Users\mshah\.gradle\caches\transforms-4\6d2999430c2b306b7907a5c137f070db\transformed\viewpager2-1.0.0\res
-com.training.recipeapp-coordinatorlayout-1.1.0-26 C:\Users\mshah\.gradle\caches\transforms-4\6e7b0ef45bc722e6efbfc13eadc33590\transformed\coordinatorlayout-1.1.0\res
-com.training.recipeapp-core-ktx-1.13.1-27 C:\Users\mshah\.gradle\caches\transforms-4\70392c8ca0e7fa4e57e045bc1099b265\transformed\core-ktx-1.13.1\res
-com.training.recipeapp-room-runtime-2.6.1-28 C:\Users\mshah\.gradle\caches\transforms-4\74fe1d23d4de4610535b6914ffd51cb4\transformed\room-runtime-2.6.1\res
-com.training.recipeapp-constraintlayout-2.1.4-29 C:\Users\mshah\.gradle\caches\transforms-4\77c653d88ea25cf1055e3fefe396bb10\transformed\constraintlayout-2.1.4\res
-com.training.recipeapp-lifecycle-livedata-2.8.4-30 C:\Users\mshah\.gradle\caches\transforms-4\7abe950746ad68db184338d1b698cbaa\transformed\lifecycle-livedata-2.8.4\res
-com.training.recipeapp-lifecycle-livedata-ktx-2.8.4-31 C:\Users\mshah\.gradle\caches\transforms-4\8dd6523ca1cc6c29ef35b527ac4d9243\transformed\lifecycle-livedata-ktx-2.8.4\res
-com.training.recipeapp-emoji2-1.3.0-32 C:\Users\mshah\.gradle\caches\transforms-4\9c3ea2505ddb9e08bd082793cc94265b\transformed\emoji2-1.3.0\res
-com.training.recipeapp-appcompat-1.7.0-33 C:\Users\mshah\.gradle\caches\transforms-4\9f143dea5db158409fd778cfe3c29b80\transformed\appcompat-1.7.0\res
-com.training.recipeapp-transition-1.5.0-34 C:\Users\mshah\.gradle\caches\transforms-4\a555b67db88f28a41a1b517c95162060\transformed\transition-1.5.0\res
-com.training.recipeapp-fragment-1.6.2-35 C:\Users\mshah\.gradle\caches\transforms-4\a72457dbbf8c700e62e5b84e11858004\transformed\fragment-1.6.2\res
-com.training.recipeapp-lifecycle-viewmodel-compose-release-36 C:\Users\mshah\.gradle\caches\transforms-4\aaeef68a0277b20205a9d9a4a7069410\transformed\lifecycle-viewmodel-compose-release\res
-com.training.recipeapp-navigation-runtime-2.7.7-37 C:\Users\mshah\.gradle\caches\transforms-4\b9b630aa55aa5d7cf403f6b38ca4b96e\transformed\navigation-runtime-2.7.7\res
-com.training.recipeapp-navigation-runtime-ktx-2.7.7-38 C:\Users\mshah\.gradle\caches\transforms-4\ba81b4db424c8d6a2158255c5430002b\transformed\navigation-runtime-ktx-2.7.7\res
-com.training.recipeapp-core-runtime-2.2.0-39 C:\Users\mshah\.gradle\caches\transforms-4\bf02df6ec7fcf36450505ce204fc1fd6\transformed\core-runtime-2.2.0\res
-com.training.recipeapp-navigation-ui-2.7.7-40 C:\Users\mshah\.gradle\caches\transforms-4\c091f2b3e471acd4c8094646a19b3da3\transformed\navigation-ui-2.7.7\res
-com.training.recipeapp-fragment-ktx-1.6.2-41 C:\Users\mshah\.gradle\caches\transforms-4\c0e4dc165ad4757ecbf644ba5e120757\transformed\fragment-ktx-1.6.2\res
-com.training.recipeapp-sqlite-framework-2.4.0-42 C:\Users\mshah\.gradle\caches\transforms-4\c43a819afb2ce8b9a6690c5b9646cdab\transformed\sqlite-framework-2.4.0\res
-com.training.recipeapp-savedstate-1.2.1-43 C:\Users\mshah\.gradle\caches\transforms-4\cad0448c3b7a6ce921a7c4e88e96c373\transformed\savedstate-1.2.1\res
-com.training.recipeapp-lifecycle-service-2.8.4-44 C:\Users\mshah\.gradle\caches\transforms-4\cbc5ed6e8628da0327032fbb4b4e1e7c\transformed\lifecycle-service-2.8.4\res
-com.training.recipeapp-lifecycle-viewmodel-savedstate-2.8.4-45 C:\Users\mshah\.gradle\caches\transforms-4\cfa4610b9b66d4f18f8ee685b6181560\transformed\lifecycle-viewmodel-savedstate-2.8.4\res
-com.training.recipeapp-lifecycle-viewmodel-release-46 C:\Users\mshah\.gradle\caches\transforms-4\cfc461b6bccdc1d1a8e8943333c26d87\transformed\lifecycle-viewmodel-release\res
-com.training.recipeapp-annotation-experimental-1.4.0-47 C:\Users\mshah\.gradle\caches\transforms-4\cfd51d71adacb3774c76860099680f5e\transformed\annotation-experimental-1.4.0\res
-com.training.recipeapp-navigation-fragment-ktx-2.7.7-48 C:\Users\mshah\.gradle\caches\transforms-4\d418b5eacef4b7ee811663009904c377\transformed\navigation-fragment-ktx-2.7.7\res
-com.training.recipeapp-navigation-fragment-2.7.7-49 C:\Users\mshah\.gradle\caches\transforms-4\d87a9372a4f83b0eeaf4e62ffd7309c7\transformed\navigation-fragment-2.7.7\res
-com.training.recipeapp-glide-4.15.1-50 C:\Users\mshah\.gradle\caches\transforms-4\d8d0279b09a4b62bceefd6844c403bf6\transformed\glide-4.15.1\res
-com.training.recipeapp-navigation-ui-ktx-2.7.7-51 C:\Users\mshah\.gradle\caches\transforms-4\d9159dbd70da32758f64ab594db6e895\transformed\navigation-ui-ktx-2.7.7\res
-com.training.recipeapp-navigation-common-ktx-2.7.7-52 C:\Users\mshah\.gradle\caches\transforms-4\dbbf0f8492044485dc8bbfaa1f55f649\transformed\navigation-common-ktx-2.7.7\res
-com.training.recipeapp-lifecycle-runtime-release-53 C:\Users\mshah\.gradle\caches\transforms-4\ddf6dca6886c81ab9096d1a134931f47\transformed\lifecycle-runtime-release\res
-com.training.recipeapp-lifecycle-process-2.8.4-54 C:\Users\mshah\.gradle\caches\transforms-4\e1dc5d82c003edec9ff43968597243c4\transformed\lifecycle-process-2.8.4\res
-com.training.recipeapp-activity-ktx-1.9.1-55 C:\Users\mshah\.gradle\caches\transforms-4\e6ed2d1465840077ec8fe81b2b2d42f7\transformed\activity-ktx-1.9.1\res
-com.training.recipeapp-startup-runtime-1.1.1-56 C:\Users\mshah\.gradle\caches\transforms-4\f58d250dadc4b2ebd83a37d68e7e02eb\transformed\startup-runtime-1.1.1\res
-com.training.recipeapp-ui-geometry-release-57 C:\Users\mshah\.gradle\caches\transforms-4\f689add665278cb27692ac462cf184ae\transformed\ui-geometry-release\res
-com.training.recipeapp-room-ktx-2.6.1-58 C:\Users\mshah\.gradle\caches\transforms-4\fa11fc536c332fbf16a8d878a6ce8bbf\transformed\room-ktx-2.6.1\res
-com.training.recipeapp-navigation-common-2.7.7-59 C:\Users\mshah\.gradle\caches\transforms-4\fcf1f5443802bff002192d36259c8fbe\transformed\navigation-common-2.7.7\res
-com.training.recipeapp-emoji2-views-helper-1.3.0-60 C:\Users\mshah\.gradle\caches\transforms-4\fd7a106b9171ffde60089989eee14b20\transformed\emoji2-views-helper-1.3.0\res
-com.training.recipeapp-pngs-61 D:\Cook-Book2\app\build\generated\res\pngs\debug
-com.training.recipeapp-resValues-62 D:\Cook-Book2\app\build\generated\res\resValues\debug
-com.training.recipeapp-packageDebugResources-63 D:\Cook-Book2\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.training.recipeapp-packageDebugResources-64 D:\Cook-Book2\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.training.recipeapp-debug-65 D:\Cook-Book2\app\build\intermediates\merged_res\debug\mergeDebugResources
-com.training.recipeapp-debug-66 D:\Cook-Book2\app\src\debug\res
-com.training.recipeapp-main-67 D:\Cook-Book2\app\src\main\res
+com.training.recipeapp-ui-unit-release-0 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\08250b017114f1491a9fde4ac14c0ea3\transformed\ui-unit-release\res
+com.training.recipeapp-ui-text-release-1 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\083160e14a77736b8b2c25fcb93a6ad8\transformed\ui-text-release\res
+com.training.recipeapp-slidingpanelayout-1.2.0-2 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\0df07e145bf4081b046435c4ec19ad51\transformed\slidingpanelayout-1.2.0\res
+com.training.recipeapp-ui-graphics-release-3 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\1658910291c145273944b7354f2e9256\transformed\ui-graphics-release\res
+com.training.recipeapp-savedstate-ktx-1.2.1-4 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\168be9d4e62de62f2c743f38681cbebe\transformed\savedstate-ktx-1.2.1\res
+com.training.recipeapp-sqlite-2.4.0-5 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\18204172474281c042b0f2904417b7c1\transformed\sqlite-2.4.0\res
+com.training.recipeapp-drawerlayout-1.1.1-6 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\21cba625089ec25580faa5802a3abf82\transformed\drawerlayout-1.1.1\res
+com.training.recipeapp-customview-poolingcontainer-1.0.0-7 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\26759fb0c6ee54d510f52754dec00766\transformed\customview-poolingcontainer-1.0.0\res
+com.training.recipeapp-cardview-1.0.0-8 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\2e4126466a4f89a46ffd64da58d1621c\transformed\cardview-1.0.0\res
+com.training.recipeapp-lifecycle-livedata-core-2.8.4-9 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\3325fd5b2a51a4bdf4e3b3dab7e55d01\transformed\lifecycle-livedata-core-2.8.4\res
+com.training.recipeapp-appcompat-resources-1.7.0-10 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\35f8f5d2693da573da4c50b041bedfb7\transformed\appcompat-resources-1.7.0\res
+com.training.recipeapp-window-1.0.0-11 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\3ad4b8a577fbc57682b05e72b4c01ecd\transformed\window-1.0.0\res
+com.training.recipeapp-core-1.13.1-12 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\3bc959314a2bf78c2151e9c455f88c85\transformed\core-1.13.1\res
+com.training.recipeapp-activity-1.9.1-13 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\3cc41465d84b731e246bdec71b674b8a\transformed\activity-1.9.1\res
+com.training.recipeapp-lifecycle-runtime-ktx-release-14 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\3e1621bd4afa102d0677a63ef7daf929\transformed\lifecycle-runtime-ktx-release\res
+com.training.recipeapp-material-1.12.0-15 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\3e4a34d3a6e0eada4e78d03d119de88a\transformed\material-1.12.0\res
+com.training.recipeapp-lifecycle-viewmodel-ktx-2.8.4-16 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\45764599a486c0bad2dde6131cd1d246\transformed\lifecycle-viewmodel-ktx-2.8.4\res
+com.training.recipeapp-recyclerview-1.1.0-17 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\49b59c5bf70d43f607b0dc8fca29f1e1\transformed\recyclerview-1.1.0\res
+com.training.recipeapp-profileinstaller-1.3.1-18 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\4d29c490dca00de5349faddab617f545\transformed\profileinstaller-1.3.1\res
+com.training.recipeapp-lifecycle-livedata-core-ktx-2.8.4-19 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\4d799ed4a37c551b23254673fc2f5e9b\transformed\lifecycle-livedata-core-ktx-2.8.4\res
+com.training.recipeapp-coil-base-2.3.0-20 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\539c83cb790e1e7225ecfad7d7a9f196\transformed\coil-base-2.3.0\res
+com.training.recipeapp-ui-release-21 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\5592e621442feb896ea6d62416ca711a\transformed\ui-release\res
+com.training.recipeapp-runtime-saveable-release-22 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\569041999978cbfd12731f373124281b\transformed\runtime-saveable-release\res
+com.training.recipeapp-ui-util-release-23 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\6416aa3dd5165f55cb5eccb371fda172\transformed\ui-util-release\res
+com.training.recipeapp-runtime-release-24 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\65df14c9ead1f8c1976777cc45c9d14b\transformed\runtime-release\res
+com.training.recipeapp-viewpager2-1.0.0-25 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\6d2999430c2b306b7907a5c137f070db\transformed\viewpager2-1.0.0\res
+com.training.recipeapp-coordinatorlayout-1.1.0-26 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\6e7b0ef45bc722e6efbfc13eadc33590\transformed\coordinatorlayout-1.1.0\res
+com.training.recipeapp-core-ktx-1.13.1-27 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\70392c8ca0e7fa4e57e045bc1099b265\transformed\core-ktx-1.13.1\res
+com.training.recipeapp-room-runtime-2.6.1-28 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\74fe1d23d4de4610535b6914ffd51cb4\transformed\room-runtime-2.6.1\res
+com.training.recipeapp-constraintlayout-2.1.4-29 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\77c653d88ea25cf1055e3fefe396bb10\transformed\constraintlayout-2.1.4\res
+com.training.recipeapp-lifecycle-livedata-2.8.4-30 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\7abe950746ad68db184338d1b698cbaa\transformed\lifecycle-livedata-2.8.4\res
+com.training.recipeapp-lifecycle-livedata-ktx-2.8.4-31 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\8dd6523ca1cc6c29ef35b527ac4d9243\transformed\lifecycle-livedata-ktx-2.8.4\res
+com.training.recipeapp-emoji2-1.3.0-32 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\9c3ea2505ddb9e08bd082793cc94265b\transformed\emoji2-1.3.0\res
+com.training.recipeapp-appcompat-1.7.0-33 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\9f143dea5db158409fd778cfe3c29b80\transformed\appcompat-1.7.0\res
+com.training.recipeapp-transition-1.5.0-34 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\a555b67db88f28a41a1b517c95162060\transformed\transition-1.5.0\res
+com.training.recipeapp-fragment-1.6.2-35 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\a72457dbbf8c700e62e5b84e11858004\transformed\fragment-1.6.2\res
+com.training.recipeapp-lifecycle-viewmodel-compose-release-36 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\aaeef68a0277b20205a9d9a4a7069410\transformed\lifecycle-viewmodel-compose-release\res
+com.training.recipeapp-navigation-runtime-2.7.7-37 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\b9b630aa55aa5d7cf403f6b38ca4b96e\transformed\navigation-runtime-2.7.7\res
+com.training.recipeapp-navigation-runtime-ktx-2.7.7-38 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\ba81b4db424c8d6a2158255c5430002b\transformed\navigation-runtime-ktx-2.7.7\res
+com.training.recipeapp-core-runtime-2.2.0-39 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\bf02df6ec7fcf36450505ce204fc1fd6\transformed\core-runtime-2.2.0\res
+com.training.recipeapp-navigation-ui-2.7.7-40 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\c091f2b3e471acd4c8094646a19b3da3\transformed\navigation-ui-2.7.7\res
+com.training.recipeapp-fragment-ktx-1.6.2-41 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\c0e4dc165ad4757ecbf644ba5e120757\transformed\fragment-ktx-1.6.2\res
+com.training.recipeapp-sqlite-framework-2.4.0-42 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\c43a819afb2ce8b9a6690c5b9646cdab\transformed\sqlite-framework-2.4.0\res
+com.training.recipeapp-savedstate-1.2.1-43 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\cad0448c3b7a6ce921a7c4e88e96c373\transformed\savedstate-1.2.1\res
+com.training.recipeapp-lifecycle-service-2.8.4-44 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\cbc5ed6e8628da0327032fbb4b4e1e7c\transformed\lifecycle-service-2.8.4\res
+com.training.recipeapp-lifecycle-viewmodel-savedstate-2.8.4-45 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\cfa4610b9b66d4f18f8ee685b6181560\transformed\lifecycle-viewmodel-savedstate-2.8.4\res
+com.training.recipeapp-lifecycle-viewmodel-release-46 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\cfc461b6bccdc1d1a8e8943333c26d87\transformed\lifecycle-viewmodel-release\res
+com.training.recipeapp-annotation-experimental-1.4.0-47 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\cfd51d71adacb3774c76860099680f5e\transformed\annotation-experimental-1.4.0\res
+com.training.recipeapp-navigation-fragment-ktx-2.7.7-48 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\d418b5eacef4b7ee811663009904c377\transformed\navigation-fragment-ktx-2.7.7\res
+com.training.recipeapp-navigation-fragment-2.7.7-49 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\d87a9372a4f83b0eeaf4e62ffd7309c7\transformed\navigation-fragment-2.7.7\res
+com.training.recipeapp-glide-4.15.1-50 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\d8d0279b09a4b62bceefd6844c403bf6\transformed\glide-4.15.1\res
+com.training.recipeapp-navigation-ui-ktx-2.7.7-51 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\d9159dbd70da32758f64ab594db6e895\transformed\navigation-ui-ktx-2.7.7\res
+com.training.recipeapp-navigation-common-ktx-2.7.7-52 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\dbbf0f8492044485dc8bbfaa1f55f649\transformed\navigation-common-ktx-2.7.7\res
+com.training.recipeapp-lifecycle-runtime-release-53 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\ddf6dca6886c81ab9096d1a134931f47\transformed\lifecycle-runtime-release\res
+com.training.recipeapp-lifecycle-process-2.8.4-54 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\e1dc5d82c003edec9ff43968597243c4\transformed\lifecycle-process-2.8.4\res
+com.training.recipeapp-activity-ktx-1.9.1-55 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\e6ed2d1465840077ec8fe81b2b2d42f7\transformed\activity-ktx-1.9.1\res
+com.training.recipeapp-startup-runtime-1.1.1-56 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\f58d250dadc4b2ebd83a37d68e7e02eb\transformed\startup-runtime-1.1.1\res
+com.training.recipeapp-ui-geometry-release-57 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\f689add665278cb27692ac462cf184ae\transformed\ui-geometry-release\res
+com.training.recipeapp-room-ktx-2.6.1-58 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\fa11fc536c332fbf16a8d878a6ce8bbf\transformed\room-ktx-2.6.1\res
+com.training.recipeapp-navigation-common-2.7.7-59 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\fcf1f5443802bff002192d36259c8fbe\transformed\navigation-common-2.7.7\res
+com.training.recipeapp-emoji2-views-helper-1.3.0-60 C:\Users\EL RAEED  A1\.gradle\caches\transforms-4\fd7a106b9171ffde60089989eee14b20\transformed\emoji2-views-helper-1.3.0\res
+com.training.recipeapp-pngs-61 G:\Dina\app\build\generated\res\pngs\debug
+com.training.recipeapp-resValues-62 G:\Dina\app\build\generated\res\resValues\debug
+com.training.recipeapp-packageDebugResources-63 G:\Dina\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.training.recipeapp-packageDebugResources-64 G:\Dina\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.training.recipeapp-debug-65 G:\Dina\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.training.recipeapp-debug-66 G:\Dina\app\src\debug\res
+com.training.recipeapp-main-67 G:\Dina\app\src\main\res

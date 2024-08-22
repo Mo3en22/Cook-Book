@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,6 +18,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import androidx.navigation.fragment.findNavController
 
 class HomeFragment : Fragment() {
 
@@ -44,11 +44,12 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         mContext = requireContext()
 
-        recyclerView = view.findViewById(R.id.recyclerView_recipe)
-        recyclerView.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
+        recyclerView = view.findViewById(R.id.recyclerViewRecipe)
+        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
-        recyclerViewCategory = view.findViewById(R.id.recyclerView_category)
-        recyclerViewCategory.layoutManager = GridLayoutManager(context,3)
+        recyclerViewCategory = view.findViewById(R.id.recyclerViewCategory)
+        recyclerViewCategory.layoutManager = GridLayoutManager(context, 3)
+
         fetchRecipes()
         fetchCategories()
 
@@ -79,8 +80,9 @@ class HomeFragment : Fragment() {
             }
         })
     }
+
     private fun fetchCategories() {
-        apiService.getCategories().enqueue(object : Callback<CategoryResponse> { // Assuming you have a CategoryResponse class
+        apiService.getCategories().enqueue(object : Callback<CategoryResponse> {
             override fun onResponse(
                 call: Call<CategoryResponse>,
                 response: Response<CategoryResponse>
@@ -89,7 +91,10 @@ class HomeFragment : Fragment() {
                     val categories = response.body()?.categories ?: emptyList()
                     adapterCategory = RecipeAdapterCategory(categories) { category ->
                         // Handle category item click
-                        // ... (Implement navigation or other actions)
+                        val bundle = Bundle().apply {
+                            putString("CATEGORY_NAME", category.strCategory)
+                        }
+                        findNavController().navigate(R.id.action_homeFragment_to_recipeListFragment, bundle)
                     }
                     recyclerViewCategory.adapter = adapterCategory
                 }

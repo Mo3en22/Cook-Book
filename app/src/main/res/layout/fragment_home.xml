@@ -1,56 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical"
+    tools:context=".fragments.HomeFragment">
 
-    <LinearLayout
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        style="@style/CustomTextStyle"
+
+        android:layout_height="wrap_content"
+        android:text="Today’s best meals"
+        android:textSize="25sp"
+        android:layout_margin="16dp" />
+
+    <!-- RecyclerView for displaying recipes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRecipe"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:overScrollMode="always" />
 
-        <TextView
-            style="@style/CustomTextStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Today`s best meals"
-            android:textSize="20sp" />
+    <!-- Category TextView -->
+    <TextView
+        android:id="@+id/textViewCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose by category"
+        style="@style/CustomTextStyle"
+        android:textSize="25sp"
+        android:layout_margin="16dp" />
 
-        <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/recyclerView_recipe"
-            style="@style/CustomTextStyle"
-            android:layout_width="match_parent"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:overScrollMode="always"
-            android:padding="8dp"
-            android:textSize="20dp"
-            tools:listitem="@layout/item_recipe_linear" />
+    <!-- RecyclerView for displaying categories -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:overScrollMode="always" />
 
-        <TextView
-            style="@style/CustomTextStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Choose by category"
-            android:textSize="20sp" />
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            android:id="@+id/recyclerView_category"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:orientation="horizontal"
-            android:overScrollMode="always"
-            tools:listitem="@layout/item_category" />
-    </LinearLayout>
-
-
-</androidx.core.widget.NestedScrollView>
-
-
+</LinearLayout>

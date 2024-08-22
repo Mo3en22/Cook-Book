@@ -4,9 +4,10 @@ package com.training.recipeapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -17,7 +18,7 @@ import java.lang.String;
 
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
-  private final NestedScrollView rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final RecyclerView recyclerViewCategory;
@@ -25,16 +26,25 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final RecyclerView recyclerViewRecipe;
 
-  private FragmentHomeBinding(@NonNull NestedScrollView rootView,
-      @NonNull RecyclerView recyclerViewCategory, @NonNull RecyclerView recyclerViewRecipe) {
+  @NonNull
+  public final TextView textViewCategory;
+
+  @NonNull
+  public final TextView textViewTitle;
+
+  private FragmentHomeBinding(@NonNull LinearLayout rootView,
+      @NonNull RecyclerView recyclerViewCategory, @NonNull RecyclerView recyclerViewRecipe,
+      @NonNull TextView textViewCategory, @NonNull TextView textViewTitle) {
     this.rootView = rootView;
     this.recyclerViewCategory = recyclerViewCategory;
     this.recyclerViewRecipe = recyclerViewRecipe;
+    this.textViewCategory = textViewCategory;
+    this.textViewTitle = textViewTitle;
   }
 
   @Override
   @NonNull
-  public NestedScrollView getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -59,20 +69,32 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.recyclerView_category;
+      id = R.id.recyclerViewCategory;
       RecyclerView recyclerViewCategory = ViewBindings.findChildViewById(rootView, id);
       if (recyclerViewCategory == null) {
         break missingId;
       }
 
-      id = R.id.recyclerView_recipe;
+      id = R.id.recyclerViewRecipe;
       RecyclerView recyclerViewRecipe = ViewBindings.findChildViewById(rootView, id);
       if (recyclerViewRecipe == null) {
         break missingId;
       }
 
-      return new FragmentHomeBinding((NestedScrollView) rootView, recyclerViewCategory,
-          recyclerViewRecipe);
+      id = R.id.textViewCategory;
+      TextView textViewCategory = ViewBindings.findChildViewById(rootView, id);
+      if (textViewCategory == null) {
+        break missingId;
+      }
+
+      id = R.id.textViewTitle;
+      TextView textViewTitle = ViewBindings.findChildViewById(rootView, id);
+      if (textViewTitle == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((LinearLayout) rootView, recyclerViewCategory,
+          recyclerViewRecipe, textViewCategory, textViewTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
