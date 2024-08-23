@@ -5,7 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -25,10 +27,19 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
   public final ImageView recipeImageView;
 
   @NonNull
+  public final TextView recipeIngredientsTextView;
+
+  @NonNull
   public final TextView recipeInstructionsTextView;
 
   @NonNull
   public final TextView recipeNameTextView;
+
+  @NonNull
+  public final RatingBar recipeRatingBar;
+
+  @NonNull
+  public final TextView recipeTypeTextView;
 
   @NonNull
   public final WebView recipeVideoWebView;
@@ -36,16 +47,25 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
   @NonNull
   public final ImageView shareIcon;
 
+  @NonNull
+  public final Button submitRatingButton;
+
   private FragmentRecipeDetailBinding(@NonNull ScrollView rootView,
-      @NonNull ImageView recipeImageView, @NonNull TextView recipeInstructionsTextView,
-      @NonNull TextView recipeNameTextView, @NonNull WebView recipeVideoWebView,
-      @NonNull ImageView shareIcon) {
+      @NonNull ImageView recipeImageView, @NonNull TextView recipeIngredientsTextView,
+      @NonNull TextView recipeInstructionsTextView, @NonNull TextView recipeNameTextView,
+      @NonNull RatingBar recipeRatingBar, @NonNull TextView recipeTypeTextView,
+      @NonNull WebView recipeVideoWebView, @NonNull ImageView shareIcon,
+      @NonNull Button submitRatingButton) {
     this.rootView = rootView;
     this.recipeImageView = recipeImageView;
+    this.recipeIngredientsTextView = recipeIngredientsTextView;
     this.recipeInstructionsTextView = recipeInstructionsTextView;
     this.recipeNameTextView = recipeNameTextView;
+    this.recipeRatingBar = recipeRatingBar;
+    this.recipeTypeTextView = recipeTypeTextView;
     this.recipeVideoWebView = recipeVideoWebView;
     this.shareIcon = shareIcon;
+    this.submitRatingButton = submitRatingButton;
   }
 
   @Override
@@ -81,6 +101,12 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recipeIngredientsTextView;
+      TextView recipeIngredientsTextView = ViewBindings.findChildViewById(rootView, id);
+      if (recipeIngredientsTextView == null) {
+        break missingId;
+      }
+
       id = R.id.recipeInstructionsTextView;
       TextView recipeInstructionsTextView = ViewBindings.findChildViewById(rootView, id);
       if (recipeInstructionsTextView == null) {
@@ -90,6 +116,18 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
       id = R.id.recipeNameTextView;
       TextView recipeNameTextView = ViewBindings.findChildViewById(rootView, id);
       if (recipeNameTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.recipeRatingBar;
+      RatingBar recipeRatingBar = ViewBindings.findChildViewById(rootView, id);
+      if (recipeRatingBar == null) {
+        break missingId;
+      }
+
+      id = R.id.recipeTypeTextView;
+      TextView recipeTypeTextView = ViewBindings.findChildViewById(rootView, id);
+      if (recipeTypeTextView == null) {
         break missingId;
       }
 
@@ -105,8 +143,15 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.submitRatingButton;
+      Button submitRatingButton = ViewBindings.findChildViewById(rootView, id);
+      if (submitRatingButton == null) {
+        break missingId;
+      }
+
       return new FragmentRecipeDetailBinding((ScrollView) rootView, recipeImageView,
-          recipeInstructionsTextView, recipeNameTextView, recipeVideoWebView, shareIcon);
+          recipeIngredientsTextView, recipeInstructionsTextView, recipeNameTextView,
+          recipeRatingBar, recipeTypeTextView, recipeVideoWebView, shareIcon, submitRatingButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

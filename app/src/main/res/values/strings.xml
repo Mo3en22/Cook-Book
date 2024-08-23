@@ -10,4 +10,6 @@
     <string name="looking_for_ricpe">Looking For Ricpe?</string>
     <string name="recipe_image">Recipe Image</string>
     <string name="recipe_name">Recipe Name</string>
+    <string name="share_icon">Share Icon</string>
+
 </resources>

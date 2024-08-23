@@ -68,12 +68,15 @@ id recipeDetailFragment
 id recipeImage1
 id recipeImage2
 id recipeImageView
+id recipeIngredientsTextView
 id recipeInstructionsTextView
 id recipeLayout1
 id recipeLayout2
 id recipeName1
 id recipeName2
 id recipeNameTextView
+id recipeRatingBar
+id recipeTypeTextView
 id recipeVideoWebView
 id recipenavgation
 id recyclerView
@@ -82,6 +85,7 @@ id rv_search_meals
 id search_box
 id shareIcon
 id splashFragment
+id submitRatingButton
 id three
 id toolbar_title
 id tv_cookbook
@@ -120,6 +124,7 @@ string menu
 string recipe_app
 string recipe_image
 string recipe_name
+string share_icon
 string singout
 style Base.Theme.RecipeApp
 style BottomNavigationView

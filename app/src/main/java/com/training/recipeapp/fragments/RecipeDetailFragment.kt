@@ -8,8 +8,11 @@ import android.view.ViewGroup
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.Button
 import android.widget.ImageView
+import android.widget.RatingBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import coil.load
 import com.training.recipeapp.R
@@ -25,8 +28,12 @@ class RecipeDetailFragment : Fragment() {
     private lateinit var recipeImageView: ImageView
     private lateinit var recipeNameTextView: TextView
     private lateinit var recipeInstructionsTextView: TextView
+    private lateinit var recipeTypeTextView: TextView
+    private lateinit var recipeIngredientsTextView: TextView
     private lateinit var recipeVideoWebView: WebView
     private lateinit var shareIcon: ImageView
+    private lateinit var recipeRatingBar: RatingBar
+    private lateinit var submitRatingButton: Button
     private var isInstructionsVisible = false
 
     override fun onCreateView(
@@ -42,8 +49,12 @@ class RecipeDetailFragment : Fragment() {
         recipeImageView = view.findViewById(R.id.recipeImageView)
         recipeNameTextView = view.findViewById(R.id.recipeNameTextView)
         recipeInstructionsTextView = view.findViewById(R.id.recipeInstructionsTextView)
+        recipeTypeTextView = view.findViewById(R.id.recipeTypeTextView)
+        recipeIngredientsTextView = view.findViewById(R.id.recipeIngredientsTextView)
         recipeVideoWebView = view.findViewById(R.id.recipeVideoWebView)
         shareIcon = view.findViewById(R.id.shareIcon)
+        recipeRatingBar = view.findViewById(R.id.recipeRatingBar)
+        submitRatingButton = view.findViewById(R.id.submitRatingButton)
 
         // Initialize Retrofit
         apiService = Retrofit.Builder()
@@ -52,6 +63,7 @@ class RecipeDetailFragment : Fragment() {
             .build()
             .create(ApiService::class.java)
 
+        // Get recipe ID from arguments
         val recipeId = arguments?.getString("RECIPE_ID") ?: return
         fetchRecipeById(recipeId)
 
@@ -63,6 +75,11 @@ class RecipeDetailFragment : Fragment() {
         // Set up click listener for share icon
         shareIcon.setOnClickListener {
             shareRecipe()
+        }
+
+        // Set up click listener for submit rating button الخاص بالتقييم
+        submitRatingButton.setOnClickListener {
+            submitRating()
         }
     }
 
@@ -77,14 +94,16 @@ class RecipeDetailFragment : Fragment() {
                     recipe?.let {
                         recipeNameTextView.text = it.strMeal
                         recipeInstructionsTextView.text = it.strInstructions ?: "No instructions available"
+                        recipeTypeTextView.text = it.strCategory ?: "Unknown type"
+                        recipeIngredientsTextView.text = extractIngredients(it)
                         recipeImageView.load(it.strMealThumb)
                         recipeInstructionsTextView.visibility = View.GONE // Hide instructions initially
 
                         // Store the image URL in arguments for sharing
                         arguments?.putString("RECIPE_IMAGE_URL", it.strMealThumb)
 
-                        // إعداد وتشغيل الفيديو
-                        val videoUrl = it.strYoutube?.replace("watch?v=", "embed/") ?: ""
+                        // إعداد وتشغيل الفيديو التحكم
+                        val videoUrl = it.strYoutube?.replace("watch?v=", "embed/") ?: "https://www.youtube.com/watch?v=8pPwWqtOFWk"
                         setupAndLoadVideo(videoUrl)
                     }
                 } else {
@@ -97,7 +116,7 @@ class RecipeDetailFragment : Fragment() {
             }
         })
     }
-
+// الجزاء بتاع فيديو اليوتيوب
     private fun setupAndLoadVideo(videoUrl: String) {
         if (videoUrl.isNotEmpty()) {
             recipeVideoWebView.webViewClient = WebViewClient()
@@ -105,6 +124,28 @@ class RecipeDetailFragment : Fragment() {
             webSettings.javaScriptEnabled = true
             recipeVideoWebView.loadUrl(videoUrl)
         }
+    }
+
+    private fun extractIngredients(recipe: Recipe): String {
+        val ingredients = mutableListOf<String>()
+
+        if (!recipe.strIngredient1.isNullOrEmpty()) {
+            ingredients.add("${recipe.strIngredient1} - ${recipe.strMeasure1.orEmpty()}")
+        }
+        if (!recipe.strIngredient2.isNullOrEmpty()) {
+            ingredients.add("${recipe.strIngredient2} - ${recipe.strMeasure2.orEmpty()}")
+        }
+        if (!recipe.strIngredient3.isNullOrEmpty()) {
+            ingredients.add("${recipe.strIngredient3} - ${recipe.strMeasure3.orEmpty()}")
+        }
+        if (!recipe.strIngredient4.isNullOrEmpty()) {
+            ingredients.add("${recipe.strIngredient4} - ${recipe.strMeasure4.orEmpty()}")
+        }
+        if (!recipe.strIngredient5.isNullOrEmpty()) {
+            ingredients.add("${recipe.strIngredient5} - ${recipe.strMeasure5.orEmpty()}")
+        }
+
+        return ingredients.joinToString(separator = "\n")
     }
 
     private fun toggleInstructionsVisibility() {
@@ -119,7 +160,7 @@ class RecipeDetailFragment : Fragment() {
     private fun shareRecipe() {
         val recipeName = recipeNameTextView.text.toString()
         val recipeInstructions = recipeInstructionsTextView.text.toString()
-        val recipeImageUrl = (arguments?.getString("RECIPE_IMAGE_URL")) ?: "https://www.youtube.com/watch?v=8pPwWqtOFWk"
+        val recipeImageUrl = arguments?.getString("RECIPE_IMAGE_URL").orEmpty()
 
         val shareText = """
         Check out this recipe!
@@ -137,10 +178,14 @@ class RecipeDetailFragment : Fragment() {
 
         startActivity(Intent.createChooser(shareIntent, "Share recipe via"))
     }
-
+// الكود الخاص بالتوست بتاع التقييم
+    private fun submitRating() {
+        val rating = recipeRatingBar.rating
+        Toast.makeText(requireContext(), "Rating submitted: $rating stars", Toast.LENGTH_SHORT).show()
+    }
+// عشان يقولي ان انت مش عملت تقييم عشان اعمل ارسال
     private fun showError(message: String) {
-        // Implement your error handling logic here
-        // For example, show a Toast or Snackbar with the error message
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
     companion object {

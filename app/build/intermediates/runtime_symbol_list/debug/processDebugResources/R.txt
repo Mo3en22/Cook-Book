@@ -3578,12 +3578,15 @@ int id recipeDetailFragment 0x7f0a019c
 int id recipeImage1 0x7f0a019d
 int id recipeImage2 0x7f0a019e
 int id recipeImageView 0x7f0a019f
+int id recipeIngredientsTextView 0x7f0a024a
 int id recipeInstructionsTextView 0x7f0a01a0
 int id recipeLayout1 0x7f0a01a1
 int id recipeLayout2 0x7f0a01a2
 int id recipeName1 0x7f0a01a3
 int id recipeName2 0x7f0a01a4
 int id recipeNameTextView 0x7f0a01a5
+int id recipeRatingBar 0x7f0a024c
+int id recipeTypeTextView 0x7f0a024b
 int id recipeVideoWebView 0x7f0a0249
 int id recipenavgation 0x7f0a01a6
 int id rectangles 0x7f0a01a7
@@ -3663,6 +3666,7 @@ int id staticPostLayout 0x7f0a01f0
 int id stop 0x7f0a01f1
 int id stretch 0x7f0a01f2
 int id submenuarrow 0x7f0a01f3
+int id submitRatingButton 0x7f0a024d
 int id submit_area 0x7f0a01f4
 int id supportScrollUp 0x7f0a01f5
 int id tabMode 0x7f0a01f6
@@ -4151,6 +4155,7 @@ int string searchbar_scrolling_view_behavior 0x7f1300b9
 int string searchview_clear_text_content_description 0x7f1300ba
 int string searchview_navigation_content_description 0x7f1300bb
 int string selected 0x7f1300bc
+int string share_icon 0x7f1300c4
 int string side_sheet_accessibility_pane_title 0x7f1300bd
 int string side_sheet_behavior 0x7f1300be
 int string singout 0x7f1300bf

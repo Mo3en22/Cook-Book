@@ -3579,12 +3579,15 @@ id recipeDetailFragment
 id recipeImage1
 id recipeImage2
 id recipeImageView
+id recipeIngredientsTextView
 id recipeInstructionsTextView
 id recipeLayout1
 id recipeLayout2
 id recipeName1
 id recipeName2
 id recipeNameTextView
+id recipeRatingBar
+id recipeTypeTextView
 id recipeVideoWebView
 id recipenavgation
 id rectangles
@@ -3664,6 +3667,7 @@ id staticPostLayout
 id stop
 id stretch
 id submenuarrow
+id submitRatingButton
 id submit_area
 id supportScrollUp
 id tabMode
@@ -4152,6 +4156,7 @@ string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
 string searchview_navigation_content_description
 string selected
+string share_icon
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string singout
