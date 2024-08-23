@@ -42,37 +42,53 @@ class RegisterFragment : Fragment() {
         val passwordEditText = view.findViewById<TextInputLayout>(R.id.etregister_password)
 
         registerButton.setOnClickListener {
-            val email = emailEditText.editText?.text.toString()
+            val email = emailEditText.editText?.text.toString().trim().lowercase()
             val username = usernameEditText.editText?.text.toString()
             val password = passwordEditText.editText?.text.toString()
             if(email.isEmpty()||username.isEmpty()||password.isEmpty()){
                 Toast.makeText(requireContext(), "Error: All fields are required!!!", Toast.LENGTH_SHORT).show() }
             else{
-            val hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt())
-
-            val user = User(id=0,email = email, username = username, hashedPassword = hashedPassword)
-
-            //ViewModelScope dose not play with me
-
-         lifecycleScope.launch {
-             withContext(Dispatchers.IO){
-                 userViewModel.insertUser(user)
-             }
-                withContext(Dispatchers.Main){
-                    findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
-                    Toast.makeText(requireContext(), "User registered successfully!", Toast.LENGTH_SHORT).show()
+                var valid = true
+                if (!isValidEmail(email)) {
+                    emailEditText.error = "Invalid email format"
+                    valid = false
+                } else {
+                    emailEditText.error = null
                 }
 
+                if (!isValidPassword(password)) {
+                    passwordEditText.error = "Invalid password format"
+                    valid = false
+                } else {
+                    passwordEditText.error = null
+                }
 
+                if (valid) {
+                    val hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt())
+                    val user = User(id = 0, email = email, username = username, hashedPassword = hashedPassword)
 
+                    lifecycleScope.launch {
+                        withContext(Dispatchers.IO) {
+                            userViewModel.insertUser(user)
+                        }
+                        withContext(Dispatchers.Main) {
+                            Toast.makeText(requireContext(), "User registered successfully!", Toast.LENGTH_SHORT).show()
+                            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+                        }
+                    }
+                }
             }
-        }}
-//        val prefs = requireActivity().getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
-//        with(prefs.edit()) {
-//            putBoolean("isLoggedIn", true)
-//            apply()
-//        }
+            }
+        }
 
+    private fun isValidPassword(password: String): Boolean {
+        return password.length >= 8 &&
+                password.contains(Regex("[A-Z]")) &&
+                password.contains(Regex("[a-z]")) &&
+                password.contains(Regex("[0-9]"))
     }
 
+    private fun isValidEmail(email: String): Boolean {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
+        }
 }

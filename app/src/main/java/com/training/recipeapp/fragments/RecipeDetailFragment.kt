@@ -14,8 +14,16 @@ import android.widget.RatingBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.navArgs
 import coil.load
 import com.training.recipeapp.R
+import com.training.recipeapp.data.AppDatabase
+import com.training.recipeapp.data.Meal
+import com.training.recipeapp.data.recipeclass
+import com.training.recipeapp.databinding.FragmentRecipeDetailBinding
+import com.training.recipeapp.viewmodel.favmealviewmodel
+import com.training.recipeapp.viewmodel.mealviewmodelfactroy
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -23,9 +31,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class RecipeDetailFragment : Fragment() {
-
+    private val args: RecipeDetailFragmentArgs by navArgs()
     private lateinit var apiService: ApiService
     private lateinit var recipeImageView: ImageView
+    private lateinit var binding: FragmentRecipeDetailBinding
     private lateinit var recipeNameTextView: TextView
     private lateinit var recipeInstructionsTextView: TextView
     private lateinit var recipeTypeTextView: TextView
@@ -34,14 +43,15 @@ class RecipeDetailFragment : Fragment() {
     private lateinit var shareIcon: ImageView
     private lateinit var recipeRatingBar: RatingBar
     private lateinit var submitRatingButton: Button
+    private lateinit var mealmvvm: favmealviewmodel
     private var isInstructionsVisible = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_recipe_detail, container, false)
-    }
+        binding= FragmentRecipeDetailBinding.inflate(inflater, container, false)
+        return binding.root}
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -56,6 +66,9 @@ class RecipeDetailFragment : Fragment() {
         shareIcon = view.findViewById(R.id.shareIcon)
         recipeRatingBar = view.findViewById(R.id.recipeRatingBar)
         submitRatingButton = view.findViewById(R.id.submitRatingButton)
+        val mealDatabase = AppDatabase.getDatabase(requireContext())
+        val mealviewmodelfactroy = mealviewmodelfactroy(mealDatabase)
+        mealmvvm= ViewModelProvider(this,mealviewmodelfactroy)[favmealviewmodel::class.java]
 
         // Initialize Retrofit
         apiService = Retrofit.Builder()
@@ -65,7 +78,7 @@ class RecipeDetailFragment : Fragment() {
             .create(ApiService::class.java)
 
         // Get recipe ID from arguments
-        val recipeId = arguments?.getString("RECIPE_ID") ?: return
+        val recipeId = args.idmeal
         fetchRecipeById(recipeId)
 
         // Set up click listener for recipe name
@@ -82,37 +95,47 @@ class RecipeDetailFragment : Fragment() {
         submitRatingButton.setOnClickListener {
             submitRating()
         }
+        onfavoritclike()
     }
-
+    private fun onfavoritclike() {
+        binding.floatingActionButton.setOnClickListener{
+            mealtofav?.let {
+                mealmvvm.insertmealtofav(it)
+                Toast.makeText(requireContext(),"Meal Saved",Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+    private var mealtofav:Meal?=null
     private fun fetchRecipeById(id: String) {
-        apiService.getRecipeById(id).enqueue(object : Callback<RecipeResponse> {
-            override fun onResponse(
-                call: Call<RecipeResponse>,
-                response: Response<RecipeResponse>
-            ) {
-                if (response.isSuccessful) {
-                    val recipe = response.body()?.meals?.firstOrNull()
-                    recipe?.let {
-                        recipeNameTextView.text = it.strMeal
-                        recipeInstructionsTextView.text = it.strInstructions ?: "No instructions available"
-                        recipeTypeTextView.text = it.strCategory ?: "Unknown type"
-                        recipeIngredientsTextView.text = extractIngredients(it)
-                        recipeImageView.load(it.strMealThumb)
-                        recipeInstructionsTextView.visibility = View.GONE // Hide instructions initially
+        apiService.getRecipeById(id).enqueue(object : Callback<recipeclass> {
 
-                        // Store the image URL in arguments for sharing
-                        arguments?.putString("RECIPE_IMAGE_URL", it.strMealThumb)
 
-                        // إعداد وتشغيل الفيديو التحكم
-                        val videoUrl = it.strYoutube?.replace("watch?v=", "embed/") ?: "https://www.youtube.com/watch?v=8pPwWqtOFWk"
-                        setupAndLoadVideo(videoUrl)
-                    }
-                } else {
-                    showError("Failed to load recipe details")
+
+
+            override fun onResponse(call: Call<recipeclass>, response: Response<recipeclass>) {
+            if (response.isSuccessful) {
+                val recipe = response.body()?.meals?.firstOrNull()
+                recipe?.let {
+                    mealtofav=recipe
+                    recipeNameTextView.text = it.strMeal
+                    recipeInstructionsTextView.text = it.strInstructions ?: "No instructions available"
+                    recipeTypeTextView.text = it.strCategory ?: "Unknown type"
+                    recipeIngredientsTextView.text = extractIngredients(it)
+                    recipeImageView.load(it.strMealThumb)
+                    recipeInstructionsTextView.visibility = View.GONE // Hide instructions initially
+
+                    // Store the image URL in arguments for sharing
+                    arguments?.putString("RECIPE_IMAGE_URL", it.strMealThumb)
+
+                    // إعداد وتشغيل الفيديو التحكم
+                    val videoUrl = it.strYoutube?.replace("watch?v=", "embed/") ?: "https://www.youtube.com/watch?v=8pPwWqtOFWk"
+                    setupAndLoadVideo(videoUrl)
                 }
+            } else {
+                showError("Failed to load recipe details")}
             }
 
-            override fun onFailure(call: Call<RecipeResponse>, t: Throwable) {
+            override fun onFailure(call: Call<recipeclass>, t: Throwable) {
                 showError("Failed to connect to the server")
             }
         })
@@ -127,7 +150,7 @@ class RecipeDetailFragment : Fragment() {
         }
     }
 
-    private fun extractIngredients(recipe: Recipe): String {
+    private fun extractIngredients(recipe: Meal): String {
         val ingredients = mutableListOf<String>()
 
         if (!recipe.strIngredient1.isNullOrEmpty()) {

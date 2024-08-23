@@ -28,6 +28,8 @@
     <string name="recipe_app">Recipe App</string>
     <string name="recipe_image">Recipe Image</string>
     <string name="recipe_name">Recipe Name</string>
+    <string name="search">ٍٍSearch</string>
+    <string name="share_icon">Share Icon</string>
     <string name="singout">SingOut</string>
     <style name="Base.Theme.RecipeApp" parent="Theme.Material3.DayNight.NoActionBar">
          <item name="colorPrimary">@color/black</item>

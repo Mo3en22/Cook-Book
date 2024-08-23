@@ -3042,9 +3042,12 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_close_24
 drawable baseline_create_24
+drawable baseline_favorite_24
 drawable baseline_logout_24
 drawable baseline_menu_24
 drawable baseline_search_24
+drawable baseline_sync_24
+drawable bottomnavgationshap
 drawable broken_image
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3147,6 +3150,7 @@ drawable mtrl_switch_thumb_unchecked_pressed
 drawable mtrl_switch_track
 drawable mtrl_switch_track_decoration
 drawable mtrl_tabs_default_indicator
+drawable navigatiionbottomshape
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -3161,6 +3165,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable searchsahpe
 drawable shape
 drawable shape2
 drawable test_level_drawable
@@ -3232,10 +3237,12 @@ id action_creator
 id action_divider
 id action_favFragment_to_creatorFragment
 id action_favFragment_to_recipeDetailFragment
+id action_favoritesFragment_to_searchFragment
 id action_homeFragment_to_creatorFragment
 id action_homeFragment_to_favFragment
 id action_homeFragment_to_recipeDetailFragment2
 id action_homeFragment_to_recipeListFragment
+id action_homeFragment_to_searchFragment
 id action_image
 id action_loginFragment_to_registerFragment
 id action_menu_divider
@@ -3246,7 +3253,11 @@ id action_mode_close_button
 id action_recipeDetailFragment_to_creatorFragment
 id action_recipeListFragment_to_creatorFragment
 id action_recipeListFragment_to_recipeDetailFragment
+id action_recipeListFragment_to_searchFragment
 id action_registerFragment_to_loginFragment
+id action_searchFragment_to_creatorFragment
+id action_searchFragment_to_favoritesFragment
+id action_searchFragment_to_recipeDetailFragment
 id action_splashFragment_to_loginFragment
 id action_text
 id actions
@@ -3392,6 +3403,7 @@ id fitXY
 id fixed
 id flip
 id floating
+id floating_action_button
 id forever
 id four
 id fragment_container
@@ -3423,7 +3435,6 @@ id ignore
 id ignoreRequest
 id image
 id imgSearch
-id imghomesearcrh
 id immediateStop
 id included
 id indeterminate
@@ -3531,6 +3542,7 @@ id navigation_bar_item_small_label_view
 id navigation_favorites
 id navigation_header_container
 id navigation_home
+id navigation_search
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
@@ -3608,6 +3620,7 @@ id right_side
 id rounded
 id row_index_key
 id rtl
+id rv_Favourit_meals
 id rv_search_meals
 id save_non_transition_alpha
 id save_overlay_view
@@ -3619,6 +3632,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchFragment
 id search_badge
 id search_bar
 id search_box
@@ -4163,6 +4177,7 @@ string range_start
 string recipe_app
 string recipe_image
 string recipe_name
+string search
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description

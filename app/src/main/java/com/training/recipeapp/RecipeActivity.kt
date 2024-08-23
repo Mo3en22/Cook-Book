@@ -16,33 +16,35 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.res.ResourcesCompat
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.training.recipeapp.data.AppDatabase
 import com.training.recipeapp.fragments.CreatorFragment
 import com.training.recipeapp.fragments.HomeFragment
 import com.training.recipeapp.fragments.SearchFragment
+import com.training.recipeapp.viewmodel.HomeViewModel
+import com.training.recipeapp.viewmodel.Homeviewmodelfactroy
 
 @Suppress("DEPRECATION")
 class RecipeActivity : AppCompatActivity() {
-    private lateinit var imgsearch: ImageView
+    val viewModel: HomeViewModel by lazy {
+        val appDatabase= AppDatabase.getDatabase(this)
+        val homeViewModelProviderFactory= Homeviewmodelfactroy(appDatabase)
+        ViewModelProvider(this,homeViewModelProviderFactory)[HomeViewModel::class.java]
+    }
+
     private lateinit var navController: NavController
 
 
-    private fun openSearchFragment() {
-        val fragmentManager = supportFragmentManager
-        val transaction = fragmentManager.beginTransaction()
-        transaction.replace(R.id.nav_host_Recipefragment, SearchFragment(), "search_fragment_tag")
-        transaction.setReorderingAllowed(true)
-        transaction.addToBackStack("search_fragment_backstack")
-        transaction.commit()
-    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipe)
-        imgsearch = findViewById(R.id.imghomesearcrh)
+
 
         val toolbar: Toolbar = findViewById(R.id.appbar)
         setSupportActionBar(toolbar)
@@ -65,14 +67,16 @@ class RecipeActivity : AppCompatActivity() {
                     navController.navigate(R.id.favoritesFragment) // Navigate to FavoritesFragment
                     true
                 }
+                R.id.navigation_search -> {
+                    navController.navigate(R.id.searchFragment) // Navigate to SearchFragment
+                    true
+                }
 
                 else -> false
             }
 
         }
-        imgsearch.setOnClickListener {
-            openSearchFragment()
-        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

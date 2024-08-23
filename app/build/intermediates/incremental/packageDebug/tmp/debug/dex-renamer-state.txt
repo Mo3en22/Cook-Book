@@ -1,13 +1,13 @@
-#Fri Aug 23 17:38:03 EEST 2024
-base.0=C\:\\Users\\smart\\AndroidStudioProjects\\Cook-Book\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\smart\\AndroidStudioProjects\\Cook-Book\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\smart\\AndroidStudioProjects\\Cook-Book\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
-base.3=C\:\\Users\\smart\\AndroidStudioProjects\\Cook-Book\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
-base.4=C\:\\Users\\smart\\AndroidStudioProjects\\Cook-Book\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
-base.5=C\:\\Users\\smart\\AndroidStudioProjects\\Cook-Book\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
-base.6=C\:\\Users\\smart\\AndroidStudioProjects\\Cook-Book\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
-base.7=C\:\\Users\\smart\\AndroidStudioProjects\\Cook-Book\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
-base.8=C\:\\Users\\smart\\AndroidStudioProjects\\Cook-Book\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Fri Aug 23 22:31:18 EEST 2024
+base.0=C\:\\Users\\newvi\\Desktop\\Cook-Book2\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\newvi\\Desktop\\Cook-Book2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\newvi\\Desktop\\Cook-Book2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.3=C\:\\Users\\newvi\\Desktop\\Cook-Book2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
+base.4=C\:\\Users\\newvi\\Desktop\\Cook-Book2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.5=C\:\\Users\\newvi\\Desktop\\Cook-Book2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
+base.6=C\:\\Users\\newvi\\Desktop\\Cook-Book2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.7=C\:\\Users\\newvi\\Desktop\\Cook-Book2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
+base.8=C\:\\Users\\newvi\\Desktop\\Cook-Book2\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=12/classes.dex

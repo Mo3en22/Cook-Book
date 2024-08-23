@@ -4,7 +4,6 @@ package com.training.recipeapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,9 +29,6 @@ public final class ActivityRecipeBinding implements ViewBinding {
   public final BottomNavigationView bottomNavigation;
 
   @NonNull
-  public final ImageView imghomesearcrh;
-
-  @NonNull
   public final ConstraintLayout main;
 
   @NonNull
@@ -42,13 +38,11 @@ public final class ActivityRecipeBinding implements ViewBinding {
   public final TextView toolbarTitle;
 
   private ActivityRecipeBinding(@NonNull ConstraintLayout rootView, @NonNull Toolbar appbar,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull ImageView imghomesearcrh,
-      @NonNull ConstraintLayout main, @NonNull FragmentContainerView navHostRecipefragment,
-      @NonNull TextView toolbarTitle) {
+      @NonNull BottomNavigationView bottomNavigation, @NonNull ConstraintLayout main,
+      @NonNull FragmentContainerView navHostRecipefragment, @NonNull TextView toolbarTitle) {
     this.rootView = rootView;
     this.appbar = appbar;
     this.bottomNavigation = bottomNavigation;
-    this.imghomesearcrh = imghomesearcrh;
     this.main = main;
     this.navHostRecipefragment = navHostRecipefragment;
     this.toolbarTitle = toolbarTitle;
@@ -93,12 +87,6 @@ public final class ActivityRecipeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imghomesearcrh;
-      ImageView imghomesearcrh = ViewBindings.findChildViewById(rootView, id);
-      if (imghomesearcrh == null) {
-        break missingId;
-      }
-
       ConstraintLayout main = (ConstraintLayout) rootView;
 
       id = R.id.nav_host_Recipefragment;
@@ -113,8 +101,8 @@ public final class ActivityRecipeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityRecipeBinding((ConstraintLayout) rootView, appbar, bottomNavigation,
-          imghomesearcrh, main, navHostRecipefragment, toolbarTitle);
+      return new ActivityRecipeBinding((ConstraintLayout) rootView, appbar, bottomNavigation, main,
+          navHostRecipefragment, toolbarTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

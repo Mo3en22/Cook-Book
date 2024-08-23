@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.replace
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.training.recipeapp.R
+import com.training.recipeapp.RecipeActivity
 import com.training.recipeapp.databinding.FragmentSearchBinding
 import com.training.recipeapp.mealadpter.Mealadpter
 import com.training.recipeapp.viewmodel.HomeViewModel
@@ -21,7 +23,7 @@ class SearchFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        viewModel = (activity as RecipeActivity).viewModel
     }
 
     override fun onCreateView(
@@ -57,11 +59,9 @@ class SearchFragment : Fragment() {
     private fun prepareRecyclerView() {
         searchRecyclerviewAdapter = Mealadpter { meal ->
             // Handle item click
-            val recipeDetailFragment = RecipeDetailFragment.newInstance(meal.idMeal)
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, recipeDetailFragment)
-                .addToBackStack(null)
-                .commit()
+            val action = SearchFragmentDirections.actionSearchFragmentToRecipeDetailFragment(meal.idMeal)
+            findNavController().navigate(action)
+
         }
 
         binding.rvSearchMeals.apply {

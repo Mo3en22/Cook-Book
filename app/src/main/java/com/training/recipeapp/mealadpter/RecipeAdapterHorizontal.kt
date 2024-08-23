@@ -8,12 +8,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.training.recipeapp.R
+import com.training.recipeapp.data.Meal
 import com.training.recipeapp.fragments.Recipe
 
 @Suppress("DEPRECATION")
 class RecipeAdapterHorizontal(
-    private val recipes: List<Recipe>,
-    private val onItemClick: (Recipe) -> Unit
+    private val recipes: List<Meal>,
+    private val onItemClick: (Meal) -> Unit
 ) : RecyclerView.Adapter<RecipeAdapterHorizontal.RecipeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
@@ -36,7 +37,7 @@ class RecipeAdapterHorizontal(
         private val recipename: TextView = itemView.findViewById(R.id.tv_meal_name)
         private val recipeimage: ImageView = itemView.findViewById(R.id.iv_meal)
 
-        fun bind(recipe: Recipe) {
+        fun bind(recipe: Meal) {
             recipename.text = recipe.strMeal
             recipeimage.load(recipe.strMealThumb) {
                 crossfade(true)

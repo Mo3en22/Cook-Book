@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.training.recipeapp.R
+import com.training.recipeapp.data.recipeclass
 import com.training.recipeapp.mealadpter.RecipeAdapterHorizontal
 import retrofit2.Call
 import retrofit2.Callback
@@ -54,25 +55,21 @@ class RecipeListFragment : Fragment() {
     }
 
     private fun fetchRecipesByCategory() {
-        apiService.getRecipesByCategory(categoryName).enqueue(object : Callback<RecipeResponse> {
-            override fun onResponse(
-                call: Call<RecipeResponse>,
-                response: Response<RecipeResponse>
-            ) {
+        apiService.getRecipesByCategory(categoryName).enqueue(object : Callback<recipeclass> {
+
+            override fun onResponse(call: Call<recipeclass>, response: Response<recipeclass>) {
                 if (response.isSuccessful) {
                     val recipes = response.body()?.meals ?: emptyList()
                     adapter = RecipeAdapterHorizontal(recipes) { recipe ->
                         // Handle recipe item click
-                        val bundle = Bundle().apply {
-                            putString("RECIPE_ID", recipe.idMeal)
-                        }
-                        findNavController().navigate(R.id.action_recipeListFragment_to_recipeDetailFragment, bundle)
+                        val action = RecipeListFragmentDirections.actionRecipeListFragmentToRecipeDetailFragment(recipe.idMeal)
+                        findNavController().navigate(action)
                     }
                     recyclerView.adapter = adapter
                 }
             }
 
-            override fun onFailure(call: Call<RecipeResponse>, t: Throwable) {
+            override fun onFailure(call: Call<recipeclass>, t: Throwable) {
                 Toast.makeText(context, "Check Your Internet Connection", Toast.LENGTH_SHORT).show()
             }
         })

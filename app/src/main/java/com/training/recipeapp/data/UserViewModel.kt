@@ -25,15 +25,6 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
         return repository.getUserByEmail(email)
     }
 
-    suspend fun insertRecipe(recipe: FavoriteRecipe)= withContext(Dispatchers.IO){
-       repository.insertRecipe(recipe)
-    }
-
-    fun getFavoriteRecipes(): LiveData<List<FavoriteRecipe>> =repository.getAllFavorites()
-
-    suspend fun deleteRecipe(recipe: FavoriteRecipe) = withContext(Dispatchers.IO){
-        repository.deleteRecipe(recipe) }
-
 
 
 }

@@ -1,5 +1,6 @@
 package com.training.recipeapp.fragments
 
+import com.training.recipeapp.data.recipeclass
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -70,16 +71,16 @@ data class Category(
 // واجهة API
 interface ApiService {
     @GET("api/json/v1/1/search.php?s=")
-    fun getRecipes(): Call<RecipeResponse>
+    fun getRecipes(): Call<recipeclass>
 
     @GET("api/json/v1/1/lookup.php")
-    fun getRecipeById(@Query("i") id: String): Call<RecipeResponse>
+    fun getRecipeById(@Query("i") id: String): Call<recipeclass>
 
     @GET("api/json/v1/1/categories.php")
     fun getCategories(): Call<CategoryResponse>
 
     @GET("api/json/v1/1/filter.php")
-    fun getRecipesByCategory(@Query("c") category: String): Call<RecipeResponse>
+    fun getRecipesByCategory(@Query("c") category: String): Call<recipeclass>
 
 
 }

@@ -19,6 +19,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import androidx.navigation.fragment.findNavController
+import com.training.recipeapp.data.recipeclass
 
 class HomeFragment : Fragment() {
 
@@ -48,7 +49,7 @@ class HomeFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         recyclerViewCategory = view.findViewById(R.id.recyclerViewCategory)
-        recyclerViewCategory.layoutManager = GridLayoutManager(context, 3)
+        recyclerViewCategory.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         fetchRecipes()
         fetchCategories()
@@ -57,30 +58,28 @@ class HomeFragment : Fragment() {
     }
 
     private fun fetchRecipes() {
-        apiService.getRecipes().enqueue(object : Callback<RecipeResponse> {
-            override fun onResponse(
-                call: Call<RecipeResponse>,
-                response: Response<RecipeResponse>
-            ) {
+        apiService.getRecipes().enqueue(object : Callback<recipeclass> {
+
+
+            override fun onResponse(call: Call<recipeclass>, response: Response<recipeclass>) {
                 if (response.isSuccessful) {
                     val recipes = response.body()?.meals ?: emptyList()
                     adapter = RecipeAdapterHorizontal(recipes) { recipe ->
                         // Handle recipe item click
-                        val bundle = Bundle().apply {
-                            putString("RECIPE_ID", recipe.idMeal)
-                        }
-                        findNavController().navigate(R.id.action_homeFragment_to_recipeDetailFragment2, bundle)
+                        val action = HomeFragmentDirections.actionHomeFragmentToRecipeDetailFragment2(recipe.idMeal)
+                        findNavController().navigate(action)
                     }
                     recyclerView.adapter = adapter
+                } else {
+                    // Handle unsuccessful response
                 }
             }
 
-            override fun onFailure(call: Call<RecipeResponse>, t: Throwable) {
+            override fun onFailure(call: Call<recipeclass>, t: Throwable) {
                 Toast.makeText(mContext, "Check Your Internet Connection", Toast.LENGTH_SHORT).show()
             }
         })
     }
-
     private fun fetchCategories() {
         apiService.getCategories().enqueue(object : Callback<CategoryResponse> {
             override fun onResponse(
@@ -105,5 +104,10 @@ class HomeFragment : Fragment() {
             }
         })
     }
+    }
 
-}
+
+
+
+
+

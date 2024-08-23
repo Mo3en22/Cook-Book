@@ -4,10 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.training.recipeapp.data.db.FavoriteRecipeDao
+import com.training.recipeapp.data.db.mealstypeConverter
 
-@Database(entities = [User::class, FavoriteRecipe::class], version = 4, exportSchema = false)
+@Database(entities = [User::class, Meal::class], version = 5, exportSchema = false)
+@TypeConverters(mealstypeConverter::class)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
@@ -49,7 +53,7 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "app_database"
-                ).addMigrations(MIGRATION_2_4)
+                ).addMigrations(MIGRATION_2_4).fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance
                 instance

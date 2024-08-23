@@ -8,12 +8,13 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.training.recipeapp.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -21,7 +22,13 @@ import java.lang.String;
 
 public final class FragmentRecipeDetailBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final ConstraintLayout rootView;
+
+  @NonNull
+  public final ExtendedFloatingActionButton floatingActionButton;
+
+  @NonNull
+  public final ConstraintLayout fragmentContainer;
 
   @NonNull
   public final ImageView recipeImageView;
@@ -50,13 +57,16 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
   @NonNull
   public final Button submitRatingButton;
 
-  private FragmentRecipeDetailBinding(@NonNull ScrollView rootView,
-      @NonNull ImageView recipeImageView, @NonNull TextView recipeIngredientsTextView,
-      @NonNull TextView recipeInstructionsTextView, @NonNull TextView recipeNameTextView,
-      @NonNull RatingBar recipeRatingBar, @NonNull TextView recipeTypeTextView,
-      @NonNull WebView recipeVideoWebView, @NonNull ImageView shareIcon,
-      @NonNull Button submitRatingButton) {
+  private FragmentRecipeDetailBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ExtendedFloatingActionButton floatingActionButton,
+      @NonNull ConstraintLayout fragmentContainer, @NonNull ImageView recipeImageView,
+      @NonNull TextView recipeIngredientsTextView, @NonNull TextView recipeInstructionsTextView,
+      @NonNull TextView recipeNameTextView, @NonNull RatingBar recipeRatingBar,
+      @NonNull TextView recipeTypeTextView, @NonNull WebView recipeVideoWebView,
+      @NonNull ImageView shareIcon, @NonNull Button submitRatingButton) {
     this.rootView = rootView;
+    this.floatingActionButton = floatingActionButton;
+    this.fragmentContainer = fragmentContainer;
     this.recipeImageView = recipeImageView;
     this.recipeIngredientsTextView = recipeIngredientsTextView;
     this.recipeInstructionsTextView = recipeInstructionsTextView;
@@ -70,7 +80,7 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -95,6 +105,14 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.floating_action_button;
+      ExtendedFloatingActionButton floatingActionButton = ViewBindings.findChildViewById(rootView, id);
+      if (floatingActionButton == null) {
+        break missingId;
+      }
+
+      ConstraintLayout fragmentContainer = (ConstraintLayout) rootView;
+
       id = R.id.recipeImageView;
       ImageView recipeImageView = ViewBindings.findChildViewById(rootView, id);
       if (recipeImageView == null) {
@@ -149,9 +167,10 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentRecipeDetailBinding((ScrollView) rootView, recipeImageView,
-          recipeIngredientsTextView, recipeInstructionsTextView, recipeNameTextView,
-          recipeRatingBar, recipeTypeTextView, recipeVideoWebView, shareIcon, submitRatingButton);
+      return new FragmentRecipeDetailBinding((ConstraintLayout) rootView, floatingActionButton,
+          fragmentContainer, recipeImageView, recipeIngredientsTextView, recipeInstructionsTextView,
+          recipeNameTextView, recipeRatingBar, recipeTypeTextView, recipeVideoWebView, shareIcon,
+          submitRatingButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
