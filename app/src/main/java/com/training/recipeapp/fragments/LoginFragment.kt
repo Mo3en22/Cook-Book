@@ -45,14 +45,15 @@ class LoginFragment : Fragment() {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
         loginButton.setOnClickListener {
+
             val email = userEmailEditText.editText?.text.toString()
             val password = passwordEditText.editText?.text.toString()
 
             lifecycleScope.launch {
 
-
+               // val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
                 val user = userViewModel.getUser(email)
-                if (user != null && BCrypt.checkpw(password, user.hashedPassword)) {
+                if (user != null && BCrypt.checkpw(password, user.hashedPassword) ){//&& email.matches(emailPattern.toRegex())) {
                     val prefs =
                         requireActivity().getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
                     with(prefs.edit()) {
