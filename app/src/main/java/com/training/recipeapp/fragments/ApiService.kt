@@ -8,7 +8,6 @@ import retrofit2.http.Query
 data class RecipeResponse(
     val meals: List<Recipe>
 )
-
 // تعريف الوصفة
 data class Recipe(
     val idMeal: String,
