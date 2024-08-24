@@ -12,7 +12,7 @@ import com.training.recipeapp.fragments.Category
 import androidx.fragment.app.FragmentManager
 class  RecipeAdapterCategory(
     private val categories: List<Category>,
-    private val onItemClick: (Category) -> Unit // تأكد من أن هذه هي الطريقة الصحيحة
+    private val onItemClick: (Category) -> Unit
 ) : RecyclerView.Adapter<RecipeAdapterCategory.RecipeViewHolder>() {
 
     inner class RecipeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -25,7 +25,7 @@ class  RecipeAdapterCategory(
                 .load(category.strCategoryThumb)
                 .into(categoryImage)
 
-            itemView.setOnClickListener { onItemClick(category) } // تأكد من أنك تمرر category هنا
+            itemView.setOnClickListener { onItemClick(category) }
         }
     }
 

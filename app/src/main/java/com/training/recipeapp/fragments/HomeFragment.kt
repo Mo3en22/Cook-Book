@@ -71,7 +71,7 @@ class HomeFragment : Fragment() {
                     }
                     recyclerView.adapter = adapter
                 } else {
-                    // Handle unsuccessful response
+                    Toast.makeText(mContext, "Check Your Internet Connection", Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -89,7 +89,7 @@ class HomeFragment : Fragment() {
                 if (response.isSuccessful) {
                     val categories = response.body()?.categories ?: emptyList()
                     adapterCategory = RecipeAdapterCategory(categories) { category ->
-                        // Handle category item click
+
                         val bundle = Bundle().apply {
                             putString("CATEGORY_NAME", category.strCategory)
                         }

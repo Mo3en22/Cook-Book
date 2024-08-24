@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         app:layout_constraintTop_toBottomOf="@id/image"
-        android:layout_marginTop="10dp"> <!-- Reduced top margin -->
+        android:layout_marginTop="10dp">
 
         <com.google.android.material.textfield.TextInputEditText
             style="@style/CustomTextStyle"
@@ -44,17 +44,17 @@
             android:layout_height="wrap_content"
             android:hint="User name"
             android:inputType="text"
-            android:textSize="16sp" /> <!-- Reduced text size -->
+            android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- حقل البريد الإلكتروني -->
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etregister_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         app:layout_constraintTop_toBottomOf="@id/etregister_username"
-        android:layout_marginTop="10dp"> <!-- Reduced top margin -->
+        android:layout_marginTop="10dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -65,14 +65,14 @@
         style="@style/CustomTextStyle" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- حقل كلمة المرور -->
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etregister_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         app:layout_constraintTop_toBottomOf="@id/etregister_email"
-        android:layout_marginTop="10dp"> <!-- Reduced top margin -->
+        android:layout_marginTop="10dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -83,7 +83,7 @@
         style="@style/CustomTextStyle" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- زر التسجيل -->
+
     <Button
         android:id="@+id/b_register"
         android:layout_width="match_parent"

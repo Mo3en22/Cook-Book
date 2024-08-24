@@ -68,12 +68,12 @@
         "source": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\fragment_splash.xml"
     },
     {
-        "merged": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\mipmap-xxhdpi_app_icon.webp.flat",
-        "source": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\mipmap-xxhdpi\\app_icon.webp"
-    },
-    {
         "merged": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\drawable_baseline_sync_24.xml.flat",
         "source": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\drawable\\baseline_sync_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\mipmap-xxhdpi_app_icon.webp.flat",
+        "source": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\mipmap-xxhdpi\\app_icon.webp"
     },
     {
         "merged": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\drawable_baseline_menu_24.xml.flat",
@@ -98,6 +98,10 @@
     {
         "merged": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\drawable_child_image.png.flat",
         "source": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\drawable\\child_image.png"
+    },
+    {
+        "merged": "com.training.recipeapp-debug-65:/layout_fragment_recipe_detail.xml.flat",
+        "source": "com.training.recipeapp-main-67:/layout/fragment_recipe_detail.xml"
     },
     {
         "merged": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\drawable_baseline_close_24.xml.flat",
@@ -134,10 +138,6 @@
     {
         "merged": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "com.training.recipeapp-debug-65:/layout_item_card.xml.flat",
-        "source": "com.training.recipeapp-main-67:/layout/item_card.xml"
     },
     {
         "merged": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\layout_fragment_search_two.xml.flat",

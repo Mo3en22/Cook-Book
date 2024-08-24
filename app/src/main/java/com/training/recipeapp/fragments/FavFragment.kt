@@ -28,7 +28,7 @@ class FavFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding= FragmentFavBinding.inflate(inflater)
         return binding.root
@@ -69,11 +69,7 @@ class FavFragment : Fragment() {
             val action = FavFragmentDirections.actionFavFragmentToRecipeDetailFragment(meal.idMeal)
             findNavController().navigate(action)
             // Handle item click
-//            val recipeDetailFragment = RecipeDetailFragment.newInstance(meal.idMeal)
-//            parentFragmentManager.beginTransaction()
-//                .replace(R.id.fragment_container, recipeDetailFragment)
-//                .addToBackStack(null)
-//                .commit()
+
         }
 
         binding.rvFavouritMeals.apply {

@@ -14,7 +14,6 @@
         <item>@font/aladin</item>
     </array></file><file path="C:\Users\newvi\Desktop\Cook-Book2\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Recipe App</string><string name="hello_blank_fragment">Hello blank fragment</string><string name="cook_app">Cook App</string><string name="recipe_app">Recipe App</string><string name="singout">SingOut</string><string name="creator">Creator</string><string name="menu">menu</string><string name="looking_for_ricpe">Looking For Ricpe?</string><string name="recipe_image">Recipe Image</string><string name="recipe_name">Recipe Name</string><string name="share_icon">Share Icon</string><string name="search">ٍٍSearch</string></file><file path="C:\Users\newvi\Desktop\Cook-Book2\app\src\main\res\values\styles.xml" qualifiers=""><style name="CustomTextStyle">
         <item name="android:textSize">30sp</item>
-        <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/aladin</item>
     </style><style name="Theme.MyApp.Splash" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/logo</item> 

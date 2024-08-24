@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="Today’s best meals"
         android:textSize="25sp"
-        android:layout_margin="8dp" />
+        android:layout_margin="4dp" />
 
     <!-- RecyclerView for displaying recipes -->
     <androidx.recyclerview.widget.RecyclerView

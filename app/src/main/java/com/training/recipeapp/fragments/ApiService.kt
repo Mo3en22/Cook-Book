@@ -5,11 +5,11 @@ import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-// تعريف استجابة API للوصفات
+
 data class RecipeResponse(
     val meals: List<Recipe>
 )
-// تعريف الوصفة
+
 data class Recipe(
     val idMeal: String,
     val strMeal: String,
@@ -56,7 +56,7 @@ data class Recipe(
     val strIngredient20: String?,
     val strMeasure20: String?,
     val strCategory: String?,
-    val strYoutube: String?// إضافة التعليمات
+    val strYoutube: String?
 )
 data class CategoryResponse(
     val categories: List<Category>
@@ -68,7 +68,7 @@ data class Category(
 
 )
 
-// واجهة API
+
 interface ApiService {
     @GET("api/json/v1/1/search.php?s=")
     fun getRecipes(): Call<recipeclass>
