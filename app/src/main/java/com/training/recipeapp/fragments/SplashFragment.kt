@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.navigation.fragment.findNavController
 import com.training.recipeapp.R
 import com.training.recipeapp.RecipeActivity
@@ -37,6 +38,13 @@ class SplashFragment : Fragment() {
                 }
             }
         }, 2000)
+        val scale = AnimationUtils.loadAnimation(context, R.anim.scale)
+        val alpha = AnimationUtils.loadAnimation(context, R.anim.alpha)
+
+        view.findViewById<View>(R.id.image).startAnimation(scale)
+        view.findViewById<View>(R.id.tv_welcome).startAnimation(alpha)
+        view.findViewById<View>(R.id.tv_to).startAnimation(alpha)
+        view.findViewById<View>(R.id.tv_cookbook).startAnimation(alpha)
     }
 
     private fun checkLoginStatus(): Boolean {

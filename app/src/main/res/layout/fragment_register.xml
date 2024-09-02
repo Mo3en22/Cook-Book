@@ -14,7 +14,7 @@
         android:gravity="center"
         android:text="Register"
         style="@style/CustomTextStyle"
-        android:textSize="20sp"
+        android:textSize="30sp"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
@@ -92,6 +92,7 @@
     android:backgroundTint="@color/white"
     android:gravity="center"
     android:text="Register"
+        android:textColor="@color/black"
     style="@style/CustomTextStyle"
     app:layout_constraintTop_toBottomOf="@id/etregister_password"
     android:layout_marginTop="15dp" />

@@ -1,10 +1,13 @@
 R_DEF: Internal format may change without notice
 local
+anim alpha
+anim scale
 array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
 array preloaded_fonts
 color black
+color ic_launcher_background
 color white
 drawable app_icon_background
 drawable baseline_close_24
@@ -26,6 +29,7 @@ drawable ic_home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_share
+drawable ic_user
 drawable logo
 drawable navigatiionbottomshape
 drawable searchsahpe
@@ -47,6 +51,7 @@ id action_recipeDetailFragment_to_creatorFragment
 id action_recipeListFragment_to_creatorFragment
 id action_recipeListFragment_to_recipeDetailFragment
 id action_recipeListFragment_to_searchFragment
+id action_recipeListFragment_to_userFragment
 id action_registerFragment_to_loginFragment
 id action_searchFragment_to_creatorFragment
 id action_searchFragment_to_favoritesFragment
@@ -70,6 +75,7 @@ id image
 id imgSearch
 id iv_category
 id iv_meal
+id iv_meallist
 id iv_product
 id linear_search
 id login
@@ -113,12 +119,15 @@ id toolbar_title
 id tv_category_name
 id tv_cookbook
 id tv_meal_name
+id tv_meal_namelist
+id tv_meal_type
 id tv_product
 id tv_register
 id tv_signin
 id tv_to
 id tv_welcome
 id two
+id userFragment
 layout activity_main
 layout activity_main_view_model
 layout activity_recipe
@@ -133,12 +142,16 @@ layout fragment_search
 layout fragment_splash
 layout item_card
 layout item_category
+layout item_list
 layout item_recipe_linear
 menu bottom_nav_menu
 menu menu
 mipmap app_icon
 mipmap app_icon_foreground
 mipmap app_icon_round
+mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
 navigation navigation
 navigation recipenavgation
 string app_name

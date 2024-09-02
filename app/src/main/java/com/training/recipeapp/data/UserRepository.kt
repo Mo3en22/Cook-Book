@@ -15,8 +15,8 @@ class UserRepository(private var  userDao: UserDao,private var recipeDao: Favori
         userDao.insert(user)
     }
 
-    suspend fun getUserByEmail(email: String): User? {
-        return withContext(Dispatchers.IO){ userDao.getUserByEmail(email)}
+    fun getUserByEmail(email: String): LiveData<User?> {
+        return userDao.getUserByEmail(email)
     }
 
     suspend fun insertRecipe(recipe: Meal) {

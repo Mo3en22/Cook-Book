@@ -18,6 +18,7 @@
         <item>@font/aladin</item>
     </array>
     <color name="black">#FF000000</color>
+    <color name="ic_launcher_background">#F1CFCF</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Recipe App</string>
     <string name="cook_app">Cook App</string>

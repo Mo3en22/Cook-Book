@@ -10,6 +10,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class UserViewModel(application: Application) : AndroidViewModel(application) {
+
     private val repository: UserRepository = UserRepository(
         AppDatabase.getDatabase(application).userDao(),
         AppDatabase.getDatabase(application).favoriteRecipeDao()
@@ -21,10 +22,9 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
         repository.insertUser(user)
     }
 
-    suspend fun getUser(email: String): User? {
+    fun getUser(email: String): LiveData<User?> {
         return repository.getUserByEmail(email)
     }
-
 
 
 }

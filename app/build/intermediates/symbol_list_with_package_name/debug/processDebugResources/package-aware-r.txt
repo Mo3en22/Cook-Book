@@ -11,6 +11,7 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim alpha
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -47,6 +48,7 @@ anim nav_default_enter_anim
 anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
+anim scale
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -1473,6 +1475,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -3090,6 +3093,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable ic_share
+drawable ic_user
 drawable indeterminate_static
 drawable logo
 drawable m3_avd_hide_password
@@ -3254,6 +3258,7 @@ id action_recipeDetailFragment_to_creatorFragment
 id action_recipeListFragment_to_creatorFragment
 id action_recipeListFragment_to_recipeDetailFragment
 id action_recipeListFragment_to_searchFragment
+id action_recipeListFragment_to_userFragment
 id action_registerFragment_to_loginFragment
 id action_searchFragment_to_creatorFragment
 id action_searchFragment_to_favoritesFragment
@@ -3447,6 +3452,7 @@ id italic
 id item_touch_helper_previous_elevation
 id iv_category
 id iv_meal
+id iv_meallist
 id iv_product
 id jumpToEnd
 id jumpToStart
@@ -3746,6 +3752,8 @@ id triangle
 id tv_category_name
 id tv_cookbook
 id tv_meal_name
+id tv_meal_namelist
+id tv_meal_type
 id tv_product
 id tv_register
 id tv_signin
@@ -3757,6 +3765,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userFragment
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3923,6 +3932,7 @@ layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_card
 layout item_category
+layout item_list
 layout item_recipe_linear
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3990,6 +4000,9 @@ menu menu
 mipmap app_icon
 mipmap app_icon_foreground
 mipmap app_icon_round
+mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
 navigation navigation
 navigation recipenavgation
 plurals mtrl_badge_content_description

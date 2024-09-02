@@ -36,6 +36,7 @@ class RecipeAdapterHorizontal(
     inner class RecipeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val recipename: TextView = itemView.findViewById(R.id.tv_meal_name)
         private val recipeimage: ImageView = itemView.findViewById(R.id.iv_meal)
+        private val recipetype:TextView=itemView.findViewById(R.id.tv_meal_type)
 
         fun bind(recipe: Meal) {
             recipename.text = recipe.strMeal
@@ -44,6 +45,7 @@ class RecipeAdapterHorizontal(
                 placeholder(R.drawable.broken_image)
                 error(R.drawable.error_outline)
             }
+            recipetype.text="(${recipe.strCategory})"
         }
 
 

@@ -73,6 +73,9 @@
         <action
             android:id="@+id/action_recipeListFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_recipeListFragment_to_userFragment"
+            app:destination="@id/userFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -89,4 +92,9 @@
             android:id="@+id/action_searchFragment_to_recipeDetailFragment"
             app:destination="@id/recipeDetailFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.training.recipeapp.fragments.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" />
 </navigation>

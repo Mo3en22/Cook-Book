@@ -29,6 +29,7 @@ class HomeFragment : Fragment() {
     private lateinit var adapterCategory: RecipeAdapterCategory
     private lateinit var mContext: Context
 
+
     private val apiService: ApiService
             by lazy {
                 Retrofit.Builder()
@@ -46,7 +47,7 @@ class HomeFragment : Fragment() {
         mContext = requireContext()
 
         recyclerView = view.findViewById(R.id.recyclerViewRecipe)
-        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
         recyclerViewCategory = view.findViewById(R.id.recyclerViewCategory)
         recyclerViewCategory.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)

@@ -71,7 +71,7 @@ public final class UserDao_Impl implements UserDao {
   }
 
   @Override
-  public User getUserByEmail(final String email) {
+  public LiveData<User> getUserByEmail(final String email) {
     final String _sql = "SELECT * FROM users WHERE email = ? LIMIT 1";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -80,44 +80,53 @@ public final class UserDao_Impl implements UserDao {
     } else {
       _statement.bindString(_argIndex, email);
     }
-    __db.assertNotSuspendingTransaction();
-    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
-    try {
-      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
-      final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
-      final int _cursorIndexOfUsername = CursorUtil.getColumnIndexOrThrow(_cursor, "username");
-      final int _cursorIndexOfHashedPassword = CursorUtil.getColumnIndexOrThrow(_cursor, "hashedPassword");
-      final User _result;
-      if (_cursor.moveToFirst()) {
-        final int _tmpId;
-        _tmpId = _cursor.getInt(_cursorIndexOfId);
-        final String _tmpEmail;
-        if (_cursor.isNull(_cursorIndexOfEmail)) {
-          _tmpEmail = null;
-        } else {
-          _tmpEmail = _cursor.getString(_cursorIndexOfEmail);
+    return __db.getInvalidationTracker().createLiveData(new String[] {"users"}, false, new Callable<User>() {
+      @Override
+      @Nullable
+      public User call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
+          final int _cursorIndexOfUsername = CursorUtil.getColumnIndexOrThrow(_cursor, "username");
+          final int _cursorIndexOfHashedPassword = CursorUtil.getColumnIndexOrThrow(_cursor, "hashedPassword");
+          final User _result;
+          if (_cursor.moveToFirst()) {
+            final int _tmpId;
+            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final String _tmpEmail;
+            if (_cursor.isNull(_cursorIndexOfEmail)) {
+              _tmpEmail = null;
+            } else {
+              _tmpEmail = _cursor.getString(_cursorIndexOfEmail);
+            }
+            final String _tmpUsername;
+            if (_cursor.isNull(_cursorIndexOfUsername)) {
+              _tmpUsername = null;
+            } else {
+              _tmpUsername = _cursor.getString(_cursorIndexOfUsername);
+            }
+            final String _tmpHashedPassword;
+            if (_cursor.isNull(_cursorIndexOfHashedPassword)) {
+              _tmpHashedPassword = null;
+            } else {
+              _tmpHashedPassword = _cursor.getString(_cursorIndexOfHashedPassword);
+            }
+            _result = new User(_tmpId,_tmpEmail,_tmpUsername,_tmpHashedPassword);
+          } else {
+            _result = null;
+          }
+          return _result;
+        } finally {
+          _cursor.close();
         }
-        final String _tmpUsername;
-        if (_cursor.isNull(_cursorIndexOfUsername)) {
-          _tmpUsername = null;
-        } else {
-          _tmpUsername = _cursor.getString(_cursorIndexOfUsername);
-        }
-        final String _tmpHashedPassword;
-        if (_cursor.isNull(_cursorIndexOfHashedPassword)) {
-          _tmpHashedPassword = null;
-        } else {
-          _tmpHashedPassword = _cursor.getString(_cursorIndexOfHashedPassword);
-        }
-        _result = new User(_tmpId,_tmpEmail,_tmpUsername,_tmpHashedPassword);
-      } else {
-        _result = null;
       }
-      return _result;
-    } finally {
-      _cursor.close();
-      _statement.release();
-    }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
   }
 
   @Override

@@ -1,5 +1,6 @@
 package com.training.recipeapp.fragments
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -70,6 +71,13 @@ class RegisterFragment : Fragment() {
                     lifecycleScope.launch {
                         withContext(Dispatchers.IO) {
                             userViewModel.insertUser(user)
+
+                            val prefs = requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+                            with(prefs.edit()) {
+                                putString("email", user.email)
+                                putString("username", user.username)// Save the user's email to SharedPreferences
+                                apply()
+                            }
                         }
                         withContext(Dispatchers.Main) {
                             Toast.makeText(requireContext(), "User registered successfully!", Toast.LENGTH_SHORT).show()

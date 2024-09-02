@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -41,6 +42,7 @@ class LoginFragment : Fragment() {
         val noAccountTextView = view.findViewById<TextView>(R.id.no_account)
         val loginButton = view.findViewById<Button>(R.id.login)
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+
         noAccountTextView.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
@@ -49,14 +51,16 @@ class LoginFragment : Fragment() {
             val email = userEmailEditText.editText?.text.toString()
             val password = passwordEditText.editText?.text.toString()
 
-            lifecycleScope.launch {
+            //lifecycleScope.launch {
 
-               // val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
-                val user = userViewModel.getUser(email)
-                if (user != null && BCrypt.checkpw(password, user.hashedPassword) ){//&& email.matches(emailPattern.toRegex())) {
-                    val prefs =
+                //val user = userViewModel.getUser(email)
+                userViewModel.getUser(email).observe(viewLifecycleOwner , Observer {user->
+                if (user != null && BCrypt.checkpw(password, user.hashedPassword) ){
+
+
+                    val prefs1 =
                         requireActivity().getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
-                    with(prefs.edit()) {
+                    with(prefs1.edit()) {
                         putBoolean("isLoggedIn", true)
                         apply()
                     }
@@ -69,9 +73,9 @@ class LoginFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
-                }
+                }})
 
-            }
+           // }
         }
     }
     fun startActivity() {

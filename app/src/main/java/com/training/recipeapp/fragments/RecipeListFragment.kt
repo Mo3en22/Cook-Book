@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.training.recipeapp.R
 import com.training.recipeapp.data.recipeclass
 import com.training.recipeapp.mealadpter.RecipeAdapterHorizontal
+import com.training.recipeapp.mealadpter.RecipeListAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -22,7 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class RecipeListFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: RecipeAdapterHorizontal
+    private lateinit var adapter: RecipeListAdapter
     private lateinit var apiService: ApiService
     private lateinit var categoryName: String
 
@@ -38,8 +39,10 @@ class RecipeListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_recipe_list, container, false)
+
         recyclerView = view.findViewById(R.id.recyclerViewRecipes)
-        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.layoutManager = GridLayoutManager(context,2)
+            //LinearLayoutManager(context)
 
         apiService = Retrofit.Builder()
             .baseUrl("https://www.themealdb.com/")
@@ -60,7 +63,7 @@ class RecipeListFragment : Fragment() {
             override fun onResponse(call: Call<recipeclass>, response: Response<recipeclass>) {
                 if (response.isSuccessful) {
                     val recipes = response.body()?.meals ?: emptyList()
-                    adapter = RecipeAdapterHorizontal(recipes) { recipe ->
+                    adapter = RecipeListAdapter(recipes) { recipe ->
                         // Handle recipe item click
                         val action = RecipeListFragmentDirections.actionRecipeListFragmentToRecipeDetailFragment(recipe.idMeal)
                         findNavController().navigate(action)

@@ -14,8 +14,7 @@ interface UserDao {
    fun insert(user: User)
 
     @Query("SELECT * FROM users WHERE email = :email LIMIT 1" )
-  fun getUserByEmail(email: String):User?
-
+    fun getUserByEmail(email: String): LiveData<User?>
 
 
     @Query("SELECT * FROM  users")

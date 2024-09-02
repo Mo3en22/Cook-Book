@@ -10,7 +10,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/app_icon_foreground"
         android:label="CookBook"
-        android:roundIcon="@mipmap/app_icon_round"
+        android:roundIcon="@mipmap/app_icon_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.RecipeApp"
         tools:targetApi="31">
