@@ -68,6 +68,7 @@ class LoginFragment : Fragment() {
                         requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
                     with(prefspassword.edit()) {
                         putString("email", user.email)
+                        putString("hashedPassword", user.hashedPassword)
                         putString("Password", password)
                         apply()}
                     startActivity()

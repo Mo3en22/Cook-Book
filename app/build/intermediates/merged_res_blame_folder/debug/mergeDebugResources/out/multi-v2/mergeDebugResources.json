@@ -5360,6 +5360,25 @@
             "outputFile": "com.training.recipeapp-debug-65:/values-v16_values-v16.arsc.flat",
             "map": [
                 {
+                    "source": "C:\\Users\\newvi\\StudioProjects\\Cook-Book\\app\\src\\main\\res\\values-v16\\styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "59",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "215"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "208"
+                    }
+                },
+                {
                     "source": "C:\\Users\\newvi\\.gradle\\caches\\transforms-4\\9f143dea5db158409fd778cfe3c29b80\\transformed\\appcompat-1.7.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
@@ -5376,25 +5395,6 @@
                         "endLines": "9",
                         "endColumns": "12",
                         "endOffsets": "381"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\newvi\\Desktop\\Cook-Book\\app\\src\\main\\res\\values-v16\\styles.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "59",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "215"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "208"
                     }
                 }
             ]
@@ -6587,40 +6587,6 @@
             "outputFile": "com.training.recipeapp-debug-65:/values_values.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\newvi\\Desktop\\Cook-Book\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1,15,4,7,3,9,8,5,10,11,13,12,6,16,18,19,21,14,17,20",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "16,749,192,332,122,414,376,238,479,533,635,585,288,793,898,966,1093,679,847,1036",
-                        "endColumns": "47,43,45,43,69,64,37,49,53,51,43,49,43,53,67,69,75,69,50,56",
-                        "endOffsets": "59,788,233,371,187,474,409,283,528,580,674,630,327,842,961,1031,1164,744,893,1088"
-                    },
-                    "to": {
-                        "startLines": "2022,2043,2044,2045,2057,2063,2102,2184,2185,2186,2187,2195,2198,2203,2204,2205,2206,2207,2208,2209",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "136025,138319,138363,138409,139363,139911,145025,156782,156832,156886,156938,157589,157987,158275,158329,158397,158467,158543,158613,158664",
-                        "endColumns": "47,43,45,43,69,64,37,49,53,51,43,49,43,53,67,69,75,69,50,56",
-                        "endOffsets": "136068,138358,138404,138448,139428,139971,145058,156827,156881,156933,156977,157634,158026,158324,158392,158462,158538,158608,158659,158716"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\newvi\\Desktop\\Cook-Book\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "57,100",
-                        "endColumns": "41,41",
-                        "endOffsets": "94,137"
-                    },
-                    "to": {
-                        "startLines": "666,986",
-                        "startColumns": "4,4",
-                        "startOffsets": "36815,60548",
-                        "endColumns": "41,41",
-                        "endOffsets": "36852,60585"
-                    }
-                },
-                {
                     "source": "C:\\Users\\newvi\\.gradle\\caches\\transforms-4\\3cc41465d84b731e246bdec71b674b8a\\transformed\\activity-1.9.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3",
@@ -6690,6 +6656,23 @@
                         "endLines": "1858,9471,12598,12604",
                         "endColumns": "52,24,24,24",
                         "endOffsets": "125919,654253,770974,771216"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\newvi\\StudioProjects\\Cook-Book\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "56",
+                        "endOffsets": "109"
+                    },
+                    "to": {
+                        "startLines": "726",
+                        "startColumns": "4",
+                        "startOffsets": "40982",
+                        "endColumns": "56",
+                        "endOffsets": "41034"
                     }
                 },
                 {
@@ -6799,25 +6782,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\newvi\\Desktop\\Cook-Book\\app\\src\\main\\res\\values\\themes.xml",
-                    "from": {
-                        "startLines": "2,6",
-                        "startColumns": "4,4",
-                        "startOffsets": "102,261",
-                        "endLines": "4,6",
-                        "endColumns": "12,66",
-                        "endOffsets": "253,323"
-                    },
-                    "to": {
-                        "startLines": "2636,6648",
-                        "startColumns": "4,4",
-                        "startOffsets": "186838,467699",
-                        "endLines": "2638,6648",
-                        "endColumns": "12,65",
-                        "endOffsets": "186987,467760"
-                    }
-                },
-                {
                     "source": "C:\\Users\\newvi\\.gradle\\caches\\transforms-4\\26759fb0c6ee54d510f52754dec00766\\transformed\\customview-poolingcontainer-1.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3",
@@ -6873,6 +6837,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\newvi\\StudioProjects\\Cook-Book\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "57,100",
+                        "endColumns": "41,41",
+                        "endOffsets": "94,137"
+                    },
+                    "to": {
+                        "startLines": "666,986",
+                        "startColumns": "4,4",
+                        "startOffsets": "36815,60548",
+                        "endColumns": "41,41",
+                        "endOffsets": "36852,60585"
+                    }
+                },
+                {
                     "source": "C:\\Users\\newvi\\.gradle\\caches\\transforms-4\\cad0448c3b7a6ce921a7c4e88e96c373\\transformed\\savedstate-1.2.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -6887,6 +6868,25 @@
                         "startOffsets": "128966",
                         "endColumns": "53",
                         "endOffsets": "129015"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\newvi\\StudioProjects\\Cook-Book\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "2,6",
+                        "startColumns": "4,4",
+                        "startOffsets": "102,261",
+                        "endLines": "4,6",
+                        "endColumns": "12,66",
+                        "endOffsets": "253,323"
+                    },
+                    "to": {
+                        "startLines": "2636,6648",
+                        "startColumns": "4,4",
+                        "startOffsets": "186838,467699",
+                        "endLines": "2638,6648",
+                        "endColumns": "12,65",
+                        "endOffsets": "186987,467760"
                     }
                 },
                 {
@@ -6906,44 +6906,6 @@
                         "endLines": "155,158,1080,11458",
                         "endColumns": "55,47,51,24",
                         "endOffsets": "10667,10823,66864,728357"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\newvi\\Desktop\\Cook-Book\\app\\src\\main\\res\\values\\preloaded_fonts.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "157"
-                    },
-                    "to": {
-                        "startLines": "16",
-                        "startColumns": "4",
-                        "startOffsets": "3667",
-                        "endLines": "18",
-                        "endColumns": "12",
-                        "endOffsets": "3765"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\newvi\\Desktop\\Cook-Book\\app\\src\\main\\res\\values\\font_certs.xml",
-                    "from": {
-                        "startLines": "2,6,11",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "57,263,1993",
-                        "endLines": "5,10,15",
-                        "endColumns": "12,19,19",
-                        "endOffsets": "257,1987,3582"
-                    },
-                    "to": {
-                        "startLines": "2,6,11",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "150,352,2077",
-                        "endLines": "5,10,15",
-                        "endColumns": "12,19,19",
-                        "endOffsets": "347,2072,3662"
                     }
                 },
                 {
@@ -6985,6 +6947,25 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\newvi\\StudioProjects\\Cook-Book\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "9,13,2,6",
+                        "startColumns": "8,8,4,4",
+                        "startOffsets": "440,649,57,219",
+                        "endLines": "11,17,5,8",
+                        "endColumns": "16,16,12,12",
+                        "endOffsets": "637,891,213,430"
+                    },
+                    "to": {
+                        "startLines": "5615,5618,5631,6645",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "396467,396667,397198,467536",
+                        "endLines": "5617,5622,5634,6647",
+                        "endColumns": "16,16,12,12",
+                        "endOffsets": "396662,396875,397351,467694"
+                    }
+                },
+                {
                     "source": "C:\\Users\\newvi\\.gradle\\caches\\transforms-4\\5592e621442feb896ea6d62416ca711a\\transformed\\ui-release\\res\\values\\values.xml",
                     "from": {
                         "startLines": "34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,60,63",
@@ -7001,23 +6982,6 @@
                         "endLines": "1832,1835,1836,1841,1843,1920,2041,2042,2046,2047,2049,2060,2061,2173,2174,2175,2176,2182,2183,2194,2200,2201,2202,5637,5640,5644",
                         "endColumns": "73,57,54,50,54,52,64,53,65,100,57,51,59,61,53,35,33,49,53,45,46,35,89,12,12,12",
                         "endOffsets": "124584,124752,124807,125060,125149,129182,138260,138314,138514,138615,138730,139787,139847,155747,155801,155837,155871,156723,156777,157584,158144,158180,158270,397463,397574,397769"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\newvi\\Desktop\\Cook-Book\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endColumns": "56",
-                        "endOffsets": "109"
-                    },
-                    "to": {
-                        "startLines": "726",
-                        "startColumns": "4",
-                        "startOffsets": "40982",
-                        "endColumns": "56",
-                        "endOffsets": "41034"
                     }
                 },
                 {
@@ -7074,22 +7038,39 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\newvi\\Desktop\\Cook-Book\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\newvi\\StudioProjects\\Cook-Book\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
-                        "startLines": "9,13,2,6",
-                        "startColumns": "8,8,4,4",
-                        "startOffsets": "440,649,57,219",
-                        "endLines": "11,17,5,8",
-                        "endColumns": "16,16,12,12",
-                        "endOffsets": "637,891,213,430"
+                        "startLines": "1,15,4,7,3,9,8,5,10,11,13,12,6,16,18,19,21,14,17,20",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "16,749,192,332,122,414,376,238,479,533,635,585,288,793,898,966,1093,679,847,1036",
+                        "endColumns": "47,43,45,43,69,64,37,49,53,51,43,49,43,53,67,69,75,69,50,56",
+                        "endOffsets": "59,788,233,371,187,474,409,283,528,580,674,630,327,842,961,1031,1164,744,893,1088"
                     },
                     "to": {
-                        "startLines": "5615,5618,5631,6645",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "396467,396667,397198,467536",
-                        "endLines": "5617,5622,5634,6647",
-                        "endColumns": "16,16,12,12",
-                        "endOffsets": "396662,396875,397351,467694"
+                        "startLines": "2022,2043,2044,2045,2057,2063,2102,2184,2185,2186,2187,2195,2198,2203,2204,2205,2206,2207,2208,2209",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "136025,138319,138363,138409,139363,139911,145025,156782,156832,156886,156938,157589,157987,158275,158329,158397,158467,158543,158613,158664",
+                        "endColumns": "47,43,45,43,69,64,37,49,53,51,43,49,43,53,67,69,75,69,50,56",
+                        "endOffsets": "136068,138358,138404,138448,139428,139971,145058,156827,156881,156933,156977,157634,158026,158324,158392,158462,158538,158608,158659,158716"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\newvi\\StudioProjects\\Cook-Book\\app\\src\\main\\res\\values\\preloaded_fonts.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "157"
+                    },
+                    "to": {
+                        "startLines": "16",
+                        "startColumns": "4",
+                        "startOffsets": "3667",
+                        "endLines": "18",
+                        "endColumns": "12",
+                        "endOffsets": "3765"
                     }
                 },
                 {
@@ -7109,6 +7090,25 @@
                         "endLines": "52,677,678,679,680,1069,1070,1071,2263,5624,5627,5630,10371",
                         "endColumns": "51,60,61,61,63,58,56,53,12,12,12,12,24",
                         "endOffsets": "5307,37685,37747,37809,37873,66158,66215,66269,162442,396939,397065,397193,685337"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\newvi\\StudioProjects\\Cook-Book\\app\\src\\main\\res\\values\\font_certs.xml",
+                    "from": {
+                        "startLines": "2,6,11",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "57,263,1993",
+                        "endLines": "5,10,15",
+                        "endColumns": "12,19,19",
+                        "endOffsets": "257,1987,3582"
+                    },
+                    "to": {
+                        "startLines": "2,6,11",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "150,352,2077",
+                        "endLines": "5,10,15",
+                        "endColumns": "12,19,19",
+                        "endOffsets": "347,2072,3662"
                     }
                 },
                 {

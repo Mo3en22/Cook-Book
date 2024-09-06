@@ -76,7 +76,7 @@ class RegisterFragment : Fragment() {
                             with(prefs.edit()) {
                                 putString("email", user.email)
                                 putString("username", user.username)
-
+                                putString("hashedPassword", hashedPassword)
                                 putString("Password", password)
                                 apply()
                             }

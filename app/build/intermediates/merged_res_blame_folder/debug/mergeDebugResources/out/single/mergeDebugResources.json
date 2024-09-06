@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\mipmap-xhdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-main-67:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\newvi\\.gradle\\daemon\\8.7\\com.training.recipeapp-debug-65:\\mipmap-mdpi_app_icon_foreground.webp.flat",

@@ -9,8 +9,8 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:5:22-64
 12
 13    <permission
 13-->[androidx.core:core:1.13.1] C:\Users\newvi\.gradle\caches\transforms-4\3bc959314a2bf78c2151e9c455f88c85\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
@@ -24,60 +24,60 @@
 17-->[androidx.core:core:1.13.1] C:\Users\newvi\.gradle\caches\transforms-4\3bc959314a2bf78c2151e9c455f88c85\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
 18
 19    <application
-19-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:7:5-37:19
+19-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:7:5-37:19
 20        android:allowBackup="true"
-20-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:8:9-35
+20-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:8:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 21-->[androidx.core:core:1.13.1] C:\Users\newvi\.gradle\caches\transforms-4\3bc959314a2bf78c2151e9c455f88c85\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 22        android:dataExtractionRules="@xml/data_extraction_rules"
-22-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:9:9-65
+22-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:9:9-65
 23        android:debuggable="true"
 24        android:extractNativeLibs="false"
 25        android:fullBackupContent="@xml/backup_rules"
-25-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:10:9-54
+25-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:10:9-54
 26        android:icon="@mipmap/app_icon_foreground"
-26-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:11:9-51
+26-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:11:9-51
 27        android:label="CookBook"
-27-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:12:9-33
+27-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:12:9-33
 28        android:roundIcon="@mipmap/app_icon_foreground"
-28-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:13:9-56
+28-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:13:9-56
 29        android:supportsRtl="true"
-29-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:14:9-35
+29-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:14:9-35
 30        android:testOnly="true"
 31        android:theme="@style/Theme.RecipeApp" >
-31-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:15:9-47
+31-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:15:9-47
 32        <activity
-32-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:18:9-20:40
+32-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:18:9-20:40
 33            android:name="com.training.recipeapp.RecipeActivity"
-33-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:19:13-43
+33-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:19:13-43
 34            android:exported="false" />
-34-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:20:13-37
+34-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:20:13-37
 35        <activity
-35-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:21:9-29:20
+35-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:21:9-29:20
 36            android:name="com.training.recipeapp.AuthActivity"
-36-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:22:13-41
+36-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:22:13-41
 37            android:exported="true"
-37-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:23:13-36
+37-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:23:13-36
 38            android:launchMode="singleTop" >
-38-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:24:13-43
+38-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:24:13-43
 39            <intent-filter>
-39-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:25:13-28:29
+39-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:25:13-28:29
 40                <action android:name="android.intent.action.MAIN" />
-40-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:26:17-69
-40-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:26:25-66
+40-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:26:17-69
+40-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:26:25-66
 41
 42                <category android:name="android.intent.category.LAUNCHER" />
-42-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:27:17-77
-42-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:27:27-74
+42-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:27:17-77
+42-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:27:27-74
 43            </intent-filter>
 44        </activity>
 45
 46        <meta-data
-46-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:31:9-33:57
+46-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:31:9-33:57
 47            android:name="preloaded_fonts"
-47-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:32:13-43
+47-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:32:13-43
 48            android:resource="@array/preloaded_fonts" />
-48-->C:\Users\newvi\Desktop\Cook-Book\app\src\main\AndroidManifest.xml:33:13-54
+48-->C:\Users\newvi\StudioProjects\Cook-Book\app\src\main\AndroidManifest.xml:33:13-54
 49
 50        <provider
 50-->[androidx.emoji2:emoji2:1.3.0] C:\Users\newvi\.gradle\caches\transforms-4\9c3ea2505ddb9e08bd082793cc94265b\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
