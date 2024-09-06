@@ -44,7 +44,6 @@ class updateEmailFragment : Fragment() {
         val Password = sharedPreferences.getString("Password", "")
 
         if (email.isNullOrEmpty()) {
-            // Handle the case where email is null or empty
             Log.e("UpdateEmailFragment", "Email is not available in SharedPreferences")
             return
         }
@@ -57,14 +56,12 @@ class updateEmailFragment : Fragment() {
         val emaileditText = view.findViewById<EditText>(R.id.Email_box)
         val passwordEditText = view.findViewById<EditText>(R.id.password_box2)
         var user1:User?=null
-        // Observe the user data using the email
-        userViewModel.getUser(email).observe(viewLifecycleOwner, Observer { user ->
+       userViewModel.getUser(email).observe(viewLifecycleOwner, Observer { user ->
             if (user != null) {
                 user1=user
                 emailView.text = user.email
                 passwordView.text = Password
             } else {
-                // Handle the case where user data is not available
                 Log.e("UpdateEmailFragment", "User not found for email: $email")
                 emailView.text = "User not found"
                 passwordView.text = ""
