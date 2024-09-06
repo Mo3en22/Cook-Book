@@ -25,6 +25,9 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
     fun getUser(email: String): LiveData<User?> {
         return repository.getUserByEmail(email)
     }
+    fun updateUser(user: User,email: String,hashedPassword: String) = viewModelScope.launch(Dispatchers.IO) {
+        repository.updateUserProfile(user,email,hashedPassword)
+    }
 
 
 }

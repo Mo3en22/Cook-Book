@@ -66,7 +66,7 @@ class FavFragment : Fragment() {
 
     private fun prepareRecyclerView() {
         FavmealAdpter = FavoriteMealsAdpter{meal ->
-            val action = FavFragmentDirections.actionFavFragmentToRecipeDetailFragment(meal.idMeal)
+            val action = FavFragmentDirections.actionFavFragmentToRecipeDetailFragment(meal.idMeal,true)
             findNavController().navigate(action)
             // Handle item click
 

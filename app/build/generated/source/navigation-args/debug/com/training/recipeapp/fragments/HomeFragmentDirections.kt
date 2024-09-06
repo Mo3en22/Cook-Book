@@ -4,12 +4,14 @@ import android.os.Bundle
 import androidx.navigation.ActionOnlyNavDirections
 import androidx.navigation.NavDirections
 import com.training.recipeapp.R
+import kotlin.Boolean
 import kotlin.Int
 import kotlin.String
 
 public class HomeFragmentDirections private constructor() {
   private data class ActionHomeFragmentToRecipeDetailFragment2(
     public val idmeal: String,
+    public val isfavouraiat: Boolean = false,
   ) : NavDirections {
     public override val actionId: Int = R.id.action_homeFragment_to_recipeDetailFragment2
 
@@ -17,6 +19,7 @@ public class HomeFragmentDirections private constructor() {
       get() {
         val result = Bundle()
         result.putString("idmeal", this.idmeal)
+        result.putBoolean("isfavouraiat", this.isfavouraiat)
         return result
       }
   }
@@ -28,8 +31,8 @@ public class HomeFragmentDirections private constructor() {
     public fun actionHomeFragmentToCreatorFragment(): NavDirections =
         ActionOnlyNavDirections(R.id.action_homeFragment_to_creatorFragment)
 
-    public fun actionHomeFragmentToRecipeDetailFragment2(idmeal: String): NavDirections =
-        ActionHomeFragmentToRecipeDetailFragment2(idmeal)
+    public fun actionHomeFragmentToRecipeDetailFragment2(idmeal: String, isfavouraiat: Boolean =
+        false): NavDirections = ActionHomeFragmentToRecipeDetailFragment2(idmeal, isfavouraiat)
 
     public fun actionHomeFragmentToRecipeListFragment(): NavDirections =
         ActionOnlyNavDirections(R.id.action_homeFragment_to_recipeListFragment)

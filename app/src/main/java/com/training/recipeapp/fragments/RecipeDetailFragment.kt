@@ -22,6 +22,7 @@ import com.training.recipeapp.data.AppDatabase
 import com.training.recipeapp.data.Meal
 import com.training.recipeapp.data.recipeclass
 import com.training.recipeapp.databinding.FragmentRecipeDetailBinding
+import com.training.recipeapp.viewmodel.HomeViewModel
 import com.training.recipeapp.viewmodel.favmealviewmodel
 import com.training.recipeapp.viewmodel.mealviewmodelfactroy
 import retrofit2.Call
@@ -43,13 +44,15 @@ class RecipeDetailFragment : Fragment() {
     private lateinit var shareIcon: ImageView
     private lateinit var recipeRatingBar: RatingBar
     private lateinit var submitRatingButton: Button
+
     private lateinit var mealmvvm: favmealviewmodel
     private var isInstructionsVisible = false
+    private var isLiked = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding= FragmentRecipeDetailBinding.inflate(inflater, container, false)
         return binding.root}
 
@@ -79,6 +82,12 @@ class RecipeDetailFragment : Fragment() {
 
         // Get recipe ID from arguments
         val recipeId = args.idmeal
+        val recipeISFav=args.isfavouraiat
+        if (recipeISFav){
+            isLiked=true
+            binding.floatingActionButton.setImageResource(R.drawable.baseline_favorite_24)
+
+        }
         fetchRecipeById(recipeId)
 
         // Set up click listener for recipe name
@@ -99,10 +108,28 @@ class RecipeDetailFragment : Fragment() {
     }
     private fun onfavoritclike() {
         binding.floatingActionButton.setOnClickListener{
+            if (isLiked){
+                mealtofav?.let {
+                    mealmvvm.deletfromfavmeallist(it)
+                    Toast.makeText(requireContext(),"Meal Deleted",Toast.LENGTH_SHORT).show()
+                }//  Snackbar.make(requireView(),"Meal Deleted",Snackbar.LENGTH_LONG).setAction(
+//                    "Undo",
+//                    View.OnClickListener {
+//                        viewModel.insertmealtofav(FavmealAdpter.differ.currentList[position])
+//                    }
+//                ).show()
+                isLiked=false
+                binding.floatingActionButton.setImageResource(R.drawable.baseline_favorite_border_24)
+
+            }
+            else{
             mealtofav?.let {
                 mealmvvm.insertmealtofav(it)
                 Toast.makeText(requireContext(),"Meal Saved",Toast.LENGTH_SHORT).show()
             }
+                binding.floatingActionButton.setImageResource(R.drawable.baseline_favorite_24)
+            }
+            isLiked=true
         }
     }
     private var mealtofav:Meal?=null

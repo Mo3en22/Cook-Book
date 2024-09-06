@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
+import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
@@ -25,6 +26,8 @@ public final class UserDao_Impl implements UserDao {
   private final RoomDatabase __db;
 
   private final EntityInsertionAdapter<User> __insertionAdapterOfUser;
+
+  private final SharedSQLiteStatement __preparedStmtOfUpdate;
 
   public UserDao_Impl(@NonNull final RoomDatabase __db) {
     this.__db = __db;
@@ -56,6 +59,14 @@ public final class UserDao_Impl implements UserDao {
         }
       }
     };
+    this.__preparedStmtOfUpdate = new SharedSQLiteStatement(__db) {
+      @Override
+      @NonNull
+      public String createQuery() {
+        final String _query = "UPDATE users SET email = ?, hashedPassword = ? WHERE username = ?";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -67,6 +78,41 @@ public final class UserDao_Impl implements UserDao {
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void update(final String email, final String hashedPassword, final String username) {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdate.acquire();
+    int _argIndex = 1;
+    if (email == null) {
+      _stmt.bindNull(_argIndex);
+    } else {
+      _stmt.bindString(_argIndex, email);
+    }
+    _argIndex = 2;
+    if (hashedPassword == null) {
+      _stmt.bindNull(_argIndex);
+    } else {
+      _stmt.bindString(_argIndex, hashedPassword);
+    }
+    _argIndex = 3;
+    if (username == null) {
+      _stmt.bindNull(_argIndex);
+    } else {
+      _stmt.bindString(_argIndex, username);
+    }
+    try {
+      __db.beginTransaction();
+      try {
+        _stmt.executeUpdateDelete();
+        __db.setTransactionSuccessful();
+      } finally {
+        __db.endTransaction();
+      }
+    } finally {
+      __preparedStmtOfUpdate.release(_stmt);
     }
   }
 

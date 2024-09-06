@@ -14,7 +14,6 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.training.recipeapp.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -25,7 +24,7 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ExtendedFloatingActionButton floatingActionButton;
+  public final ImageView floatingActionButton;
 
   @NonNull
   public final ConstraintLayout fragmentContainer;
@@ -58,12 +57,12 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
   public final Button submitRatingButton;
 
   private FragmentRecipeDetailBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ExtendedFloatingActionButton floatingActionButton,
-      @NonNull ConstraintLayout fragmentContainer, @NonNull ImageView recipeImageView,
-      @NonNull TextView recipeIngredientsTextView, @NonNull TextView recipeInstructionsTextView,
-      @NonNull TextView recipeNameTextView, @NonNull RatingBar recipeRatingBar,
-      @NonNull TextView recipeTypeTextView, @NonNull WebView recipeVideoWebView,
-      @NonNull ImageView shareIcon, @NonNull Button submitRatingButton) {
+      @NonNull ImageView floatingActionButton, @NonNull ConstraintLayout fragmentContainer,
+      @NonNull ImageView recipeImageView, @NonNull TextView recipeIngredientsTextView,
+      @NonNull TextView recipeInstructionsTextView, @NonNull TextView recipeNameTextView,
+      @NonNull RatingBar recipeRatingBar, @NonNull TextView recipeTypeTextView,
+      @NonNull WebView recipeVideoWebView, @NonNull ImageView shareIcon,
+      @NonNull Button submitRatingButton) {
     this.rootView = rootView;
     this.floatingActionButton = floatingActionButton;
     this.fragmentContainer = fragmentContainer;
@@ -106,7 +105,7 @@ public final class FragmentRecipeDetailBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.floating_action_button;
-      ExtendedFloatingActionButton floatingActionButton = ViewBindings.findChildViewById(rootView, id);
+      ImageView floatingActionButton = ViewBindings.findChildViewById(rootView, id);
       if (floatingActionButton == null) {
         break missingId;
       }

@@ -3046,6 +3046,7 @@ drawable avd_show_password
 drawable baseline_close_24
 drawable baseline_create_24
 drawable baseline_favorite_24
+drawable baseline_favorite_border_24
 drawable baseline_logout_24
 drawable baseline_menu_24
 drawable baseline_search_24
@@ -3180,6 +3181,7 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id Email_box
 id FUNCTION
 id META
 id NO_DEBUG
@@ -3235,6 +3237,7 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
+id action_blankFragment_to_updateEmailFragment
 id action_container
 id action_context_bar
 id action_creator
@@ -3265,6 +3268,8 @@ id action_searchFragment_to_favoritesFragment
 id action_searchFragment_to_recipeDetailFragment
 id action_splashFragment_to_loginFragment
 id action_text
+id action_updateEmail
+id action_updateEmailFragment_to_homeFragment
 id actions
 id activity_chooser_view_content
 id add
@@ -3287,12 +3292,15 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id b_Confirm
+id b_Confirmend
 id b_register
 id barrier
 id baseline
 id beginOnFirstDraw
 id beginning
 id bestChoice
+id blankFragment
 id blocking
 id bottom
 id bottom_navigation
@@ -3380,6 +3388,8 @@ id edge
 id edit_query
 id edit_text_id
 id elastic
+id email
+id email_label
 id embed
 id end
 id endToStart
@@ -3464,6 +3474,8 @@ id legacy
 id line1
 id line3
 id linear
+id linear_email
+id linear_password
 id linear_search
 id listMode
 id list_item
@@ -3588,7 +3600,11 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id password
+id password_box2
+id password_label
 id password_toggle
+id passwrod_box
 id path
 id pathRelative
 id peekHeight
@@ -3764,6 +3780,7 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id updateEmailFragment
 id useLogo
 id userFragment
 id vertical_only
@@ -3919,6 +3936,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_blank
 layout fragment_creator
 layout fragment_fav
 layout fragment_home
@@ -3928,6 +3946,7 @@ layout fragment_recipe_list
 layout fragment_register
 layout fragment_search
 layout fragment_splash
+layout fragment_update_email
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_card
@@ -4055,6 +4074,7 @@ string character_counter_pattern
 string clear_text_end_icon_content_description
 string close_drawer
 string close_sheet
+string confirm
 string cook_app
 string creator
 string default_error_message
@@ -4204,6 +4224,13 @@ string status_bar_notification_info_overflow
 string switch_role
 string tab
 string template_percent
+string update_email
+string write_the_new_email
+string write_your_new_email
+string write_your_new_password
+string write_your_passsword
+string your_email
+string your_password
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

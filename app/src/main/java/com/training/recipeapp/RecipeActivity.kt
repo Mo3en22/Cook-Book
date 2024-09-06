@@ -103,6 +103,10 @@ class RecipeActivity : AppCompatActivity() {
                 navController.navigate(R.id.creatorFragment) // Navigate to CreatorFragment using NavController
                 true
             }
+            R.id.action_updateEmail -> {
+                navController.navigate(R.id.blankFragment) // Navigate to UpdateEmailFragment using NavController
+                true
+            }
             // Remove or replace this line if it's not used
             // R.id.action_homeFragment_to_favFragment -> {
             //    navController.navigate(R.id.favoritesFragment) // Navigate to FavoritesFragment using NavController

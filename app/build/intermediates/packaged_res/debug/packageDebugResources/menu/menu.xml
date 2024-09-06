@@ -15,4 +15,11 @@
 
         android:orderInCategory="101"
         />
+    <item
+        android:id="@+id/action_updateEmail"
+        android:title="@string/update_email"
+        app:showAsAction="never"
+        android:orderInCategory="102"
+        />
+
 </menu>

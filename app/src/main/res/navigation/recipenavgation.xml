@@ -56,6 +56,10 @@
             app:destination="@id/creatorFragment" />
         <argument android:name="idmeal"
             app:argType="string" />
+        <argument
+            android:name="isfavouraiat"
+            app:argType="boolean"
+            android:defaultValue="false" />
     </fragment>
     <argument
         android:name="RECIPE_ID"
@@ -97,4 +101,22 @@
         android:name="com.training.recipeapp.fragments.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" />
+    <fragment
+        android:id="@+id/updateEmailFragment"
+        android:name="com.training.recipeapp.fragments.updateEmailFragment"
+        android:label="fragment_update_email"
+        tools:layout="@layout/fragment_update_email" >
+        <action
+            android:id="@+id/action_updateEmailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.training.recipeapp.fragments.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" >
+        <action
+            android:id="@+id/action_blankFragment_to_updateEmailFragment"
+            app:destination="@id/updateEmailFragment" />
+    </fragment>
 </navigation>

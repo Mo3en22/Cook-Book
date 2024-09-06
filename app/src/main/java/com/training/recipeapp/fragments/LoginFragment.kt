@@ -41,7 +41,7 @@ class LoginFragment : Fragment() {
         val passwordEditText = view.findViewById<TextInputLayout>(R.id.et_password)
         val noAccountTextView = view.findViewById<TextView>(R.id.no_account)
         val loginButton = view.findViewById<Button>(R.id.login)
-        userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
 
         noAccountTextView.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
@@ -64,6 +64,12 @@ class LoginFragment : Fragment() {
                         putBoolean("isLoggedIn", true)
                         apply()
                     }
+                    val prefspassword =
+                        requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+                    with(prefspassword.edit()) {
+                        putString("email", user.email)
+                        putString("Password", password)
+                        apply()}
                     startActivity()
                 } else {
                     requireActivity().runOnUiThread {

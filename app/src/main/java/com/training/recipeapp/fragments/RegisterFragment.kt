@@ -75,7 +75,9 @@ class RegisterFragment : Fragment() {
                             val prefs = requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
                             with(prefs.edit()) {
                                 putString("email", user.email)
-                                putString("username", user.username)// Save the user's email to SharedPreferences
+                                putString("username", user.username)
+
+                                putString("Password", password)
                                 apply()
                             }
                         }
@@ -86,8 +88,8 @@ class RegisterFragment : Fragment() {
                     }
                 }
             }
-            }
         }
+    }
 
     private fun isValidPassword(password: String): Boolean {
         return password.length >= 8 &&

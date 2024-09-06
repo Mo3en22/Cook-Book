@@ -18,6 +18,9 @@ class UserRepository(private var  userDao: UserDao,private var recipeDao: Favori
     fun getUserByEmail(email: String): LiveData<User?> {
         return userDao.getUserByEmail(email)
     }
+    fun updateUserProfile(user: User,newEmail:String,newPassword:String) {
+        userDao.update(newEmail,newPassword,user.username)
+    }
 
     suspend fun insertRecipe(recipe: Meal) {
         recipeDao.upsertRecipe(recipe)

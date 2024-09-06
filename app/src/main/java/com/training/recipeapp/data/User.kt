@@ -9,7 +9,6 @@ import java.io.Serializable
 data class User(
     @PrimaryKey(autoGenerate = true)var id:Int,
     @ColumnInfo(name ="email" ) var email: String,
-
     @ColumnInfo(name = "username") var username: String,
     @ColumnInfo(name = "hashedPassword") var hashedPassword: String
 ):Serializable{

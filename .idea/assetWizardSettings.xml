@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/G:/android2/plugins/android/lib/android.jar!/images/material/icons/materialicons/share/baseline_share_24.xml" />
+                                      <entry key="url" value="file:/D:/sdk/icons/material/materialicons/favorite/baseline_favorite_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,7 +28,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_share" />
+                            <entry key="color" value="fa9092" />
+                            <entry key="outputName" value="baseline_favorite_24" />
                             <entry key="sourceFile" value="G:\yosef" />
                           </map>
                         </option>

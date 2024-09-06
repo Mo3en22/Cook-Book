@@ -21,6 +21,7 @@
     <color name="ic_launcher_background">#F1CFCF</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Recipe App</string>
+    <string name="confirm">Confirm</string>
     <string name="cook_app">Cook App</string>
     <string name="creator">Creator</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -32,6 +33,13 @@
     <string name="search">ٍٍSearch</string>
     <string name="share_icon">Share Icon</string>
     <string name="singout">SingOut</string>
+    <string name="update_email">Update Email</string>
+    <string name="write_the_new_email">Write The New Email</string>
+    <string name="write_your_new_email">Write Your New Email</string>
+    <string name="write_your_new_password">Write Your New Password</string>
+    <string name="write_your_passsword">Write Your passsword</string>
+    <string name="your_email">your email:</string>
+    <string name="your_password">Your Password:</string>
     <style name="Base.Theme.RecipeApp" parent="Theme.Material3.DayNight.NoActionBar">
          <item name="colorPrimary">@color/black</item>
     </style>
