@@ -11,3 +11,6 @@ The Cook-Book App is an Android application that allows users to explore a wide 
 - 🌟 **Share Recipes**: Can share recipes among friends.
 
 ## Screenshots
+![1](https://github.com/user-attachments/assets/34d32319-8a62-490b-8d2a-dce5f283984e)
+![2](https://github.com/user-attachments/assets/e0715a8f-9730-469b-9bfb-36a5c62d530b)
+![3](https://github.com/user-attachments/assets/a8146142-5861-4e69-acf8-7169f50461ca)
